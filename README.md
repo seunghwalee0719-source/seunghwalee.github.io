@@ -1,24 +1,16 @@
-# SEE Lab Website v3
+# SEE Lab — Blue/Navy v5
 
-Multi-page static website for the Sustainable Electrochemical Engineering Lab (SEE Lab), Sookmyung Women's University.
+GitHub Pages upload-ready multipage website.
+
+## Upload
+Upload **all files and the `assets/` folder to the repository root**. Do not upload only the ZIP.
+
+Required root files include `index.html`, `styles.css`, `app.js`, and the other HTML pages.
 
 ## Pages
-- index.html — Home
-- research.html — Research
-- people.html — People
-- publications.html — Publications
-- news.html — News
-- lab-life.html — Lab Life
-- contact.html — Contact
+Home / Research / People / Publications / News / Lab Life / Contact
 
-## Local preview
-Open `index.html` in a browser, or run any static server in this folder.
-
-## Before public launch
-1. Add official university/lab email.
-2. Add exact laboratory room/address.
-3. Replace member placeholders with verified profiles and photos.
-4. Replace publication placeholders with verified citations.
-5. Replace abstract gallery images with real lab photos if desired.
-
-The site is static HTML/CSS/JS and can be hosted on GitHub Pages, Netlify, or another static web host.
+## Notes
+- The design is fully local and does not depend on external CSS frameworks.
+- Replace publication/member/contact placeholders before final public launch.
+- Replace abstract Lab Life tiles with real photos when available.
