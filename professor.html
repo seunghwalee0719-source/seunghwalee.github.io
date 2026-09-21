@@ -4,9 +4,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Professor | SEE Lab</title>
-  <meta name="description" content="Professor Seunghwa Lee — Principal Investigator of SEE Lab at Sookmyung Women's University.">
+  <meta name="description" content="Professor Seunghwa Lee — research interests, education and research experience, awards and honors.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .cv-content{padding:72px 0 96px;background:linear-gradient(180deg,#f8fbfe 0%,#eef6fb 100%)}
+    .cv-profile{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;margin-bottom:64px}
+    .cv-photo{height:350px;border-radius:24px;overflow:hidden;background:#e9f1f7;border:1px solid #d4e2ec;box-shadow:0 20px 52px rgba(15,64,101,.14)}
+    .cv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 34%}
+    .cv-name h2{font-family:Georgia,'Times New Roman',serif;font-size:56px;line-height:1.04;letter-spacing:-.03em;color:#10263f;margin:0 0 10px}
+    .cv-name .cv-label{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#0d78c9;margin-bottom:16px}
+    .cv-name .cv-quote{font-family:Georgia,'Times New Roman',serif;font-size:27px;line-height:1.42;color:#214a6d;margin:0;max-width:740px}
+
+    .cv-section{padding:56px 0;border-top:1px solid #d8e6ef}
+    .cv-section:first-of-type{border-top:0;padding-top:0}
+    .cv-section-head{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;margin-bottom:30px}
+    .cv-section-head .num{font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1;color:#1681d4}
+    .cv-section-head h2{font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:1.12;color:#10263f;margin:0 0 8px}
+    .cv-section-head p{margin:0;color:#647d92;font-size:15px;line-height:1.72}
+
+    .interest-grid{display:flex;flex-wrap:wrap;gap:11px;margin-left:260px}
+    .interest-chip{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;background:#fff;border:1px solid #d5e5ef;color:#16466f;font-size:13px;font-weight:750;box-shadow:0 7px 20px rgba(23,78,119,.05)}
+
+    .timeline{margin-left:260px;display:grid;gap:0;border-left:2px solid #d4e5ef}
+    .timeline-row{display:grid;grid-template-columns:150px 1fr;gap:26px;position:relative;padding:0 0 30px 30px}
+    .timeline-row:last-child{padding-bottom:0}
+    .timeline-row::before{content:'';position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:#1f83d2;box-shadow:0 0 0 5px #e8f4fb}
+    .timeline-date{font-size:12px;font-weight:850;letter-spacing:.06em;color:#1475bd;text-transform:uppercase;padding-top:2px}
+    .timeline-main strong{display:block;font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:1.35;color:#17334c;margin-bottom:3px}
+    .timeline-main .institution{font-size:14px;font-weight:750;color:#426987;margin-bottom:7px}
+    .timeline-main p{margin:0;color:#60788d;font-size:14px;line-height:1.7;max-width:790px}
+
+    .awards{margin-left:260px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .award-card{background:#fff;border:1px solid #dbe8f1;border-radius:18px;padding:21px 22px;box-shadow:0 10px 28px rgba(21,70,106,.05)}
+    .award-year{font-size:11px;font-weight:850;letter-spacing:.10em;text-transform:uppercase;color:#137bc6;margin-bottom:7px}
+    .award-card h3{font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.35;color:#17334c;margin:0 0 6px}
+    .award-card p{margin:0;color:#657c90;font-size:13px;line-height:1.65}
+
+    @media(max-width:900px){
+      .cv-profile{grid-template-columns:220px 1fr;gap:32px}.cv-photo{height:300px}.cv-name h2{font-size:48px}
+      .cv-section-head{grid-template-columns:1fr;gap:8px}.interest-grid,.timeline,.awards{margin-left:0}.cv-section-head .num{font-size:25px}
+    }
+    @media(max-width:640px){
+      .cv-content{padding:52px 0 72px}.cv-profile{grid-template-columns:1fr;gap:24px;margin-bottom:48px}.cv-photo{width:min(100%,320px);height:390px}
+      .cv-name h2{font-size:43px}.cv-name .cv-quote{font-size:23px}.cv-section{padding:44px 0}.cv-section-head h2{font-size:36px}
+      .timeline-row{grid-template-columns:1fr;gap:5px;padding-left:24px}.awards{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body class="page-light">
 <header class="site-header"><div class="container nav"><div class="brand-wrap"><a class="brand" href="index.html">SEE LAB</a><div class="brand-sub">Sustainable Electrochemical<br>Engineering Lab</div></div><button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="research.html">Research</a><a class="active" href="professor.html">Professor</a><a href="people.html">People</a><a href="publications.html">Publications</a><a href="news.html">News</a><a href="lab-life.html">Lab Life</a><a href="contact.html">Contact</a></nav><div class="search-circle">⌕</div></div></header>
@@ -15,53 +59,79 @@
   <div class="container">
     <div class="eyebrow">Professor</div>
     <h1>Seunghwa Lee</h1>
-    <p>Principal Investigator of the Sustainable Electrochemical Engineering Lab at Sookmyung Women’s University.</p>
+    <p>Research interests, education and research experience, and selected awards & honors.</p>
   </div>
 </section>
 
-<main class="content professor-content">
+<main class="cv-content">
   <div class="container">
-    <section class="professor-profile reveal">
-      <div class="professor-photo" aria-label="Professor Seunghwa Lee profile photo">
-        <img src="assets/professor-seunghwa-lee.jpg" alt="Professor Seunghwa Lee">
-      </div>
-      <div class="professor-intro">
-        <div class="eyebrow">Principal Investigator</div>
+    <section class="cv-profile reveal">
+      <div class="cv-photo"><img src="assets/professor-seunghwa-lee.jpg" alt="Seunghwa Lee"></div>
+      <div class="cv-name">
+        <div class="cv-label">Curriculum Vitae Highlights</div>
         <h2>Seunghwa Lee</h2>
-        <p class="professor-title">Sustainable Electrochemical Engineering Lab<br>Sookmyung Women’s University</p>
-        <p class="professor-bio">Our research focuses on understanding dynamic electrochemical interfaces and translating mechanistic insight into durable catalysts and sustainable energy-conversion technologies. We combine electrocatalyst design with operando and in-situ spectroscopy to investigate how catalytic materials reconstruct, activate, and degrade under realistic reaction conditions.</p>
-        <div class="professor-links">
-          <a class="profile-button" href="contact.html">Email / Contact</a>
-          <span class="profile-button muted-button">Google Scholar</span>
-          <span class="profile-button muted-button">ORCID</span>
-        </div>
+        <p class="cv-quote">“Bridging the Gap between Fundamental Research and Practical Applications”</p>
       </div>
     </section>
 
-    <section class="professor-block reveal">
-      <div class="eyebrow">Research Interests</div>
-      <h2>Research at the working interface.</h2>
-      <div class="professor-focus-grid">
-        <article class="focus-card"><span>01</span><h3>Electrocatalysis</h3><p>Oxygen evolution, hydrogen evolution, catalyst reconstruction, dissolution, and durability.</p></article>
-        <article class="focus-card"><span>02</span><h3>Operando Spectroscopy</h3><p>Raman, X-ray absorption spectroscopy, SEIRAS/SERS, and complementary electrochemical analysis.</p></article>
-        <article class="focus-card"><span>03</span><h3>Electrochemical Interfaces</h3><p>Interfacial water, electrolyte ions, catalyst surfaces, ionomers, and transport phenomena.</p></article>
-        <article class="focus-card"><span>04</span><h3>Sustainable Energy</h3><p>Mechanism-driven materials design for water electrolysis and electrochemical energy conversion.</p></article>
+    <section class="cv-section reveal">
+      <div class="cv-section-head">
+        <div class="num">01</div>
+        <div>
+          <h2>Research Interests</h2>
+          <p>Core research areas listed in the curriculum vitae.</p>
+        </div>
+      </div>
+      <div class="interest-grid">
+        <span class="interest-chip">Electrocatalysis</span>
+        <span class="interest-chip">Operando / In-situ Analysis</span>
+        <span class="interest-chip">FTIR</span>
+        <span class="interest-chip">Raman</span>
+        <span class="interest-chip">UV-Vis</span>
+        <span class="interest-chip">ICP-MS</span>
+        <span class="interest-chip">Water Electrolysis</span>
+        <span class="interest-chip">CO₂ Electrolysis</span>
+        <span class="interest-chip">Fuel Cells</span>
+        <span class="interest-chip">Battery Analysis</span>
+        <span class="interest-chip">Electrochemical Fuel Synthesis</span>
       </div>
     </section>
 
-    <section class="professor-two-col reveal">
-      <div class="professor-info-card">
-        <div class="eyebrow">Academic Background</div>
-        <div class="timeline">
-          <div class="timeline-item"><strong>Sookmyung Women’s University</strong><span>Principal Investigator · SEE Lab</span></div>
-          <div class="timeline-item"><strong>École Polytechnique Fédérale de Lausanne (EPFL)</strong><span>Postdoctoral Research · Chemistry</span></div>
-          <div class="timeline-item"><strong>Gwangju Institute of Science and Technology (GIST)</strong><span>Ph.D. · Electrochemical catalysis</span></div>
+    <section class="cv-section reveal">
+      <div class="cv-section-head">
+        <div class="num">02</div>
+        <div>
+          <h2>Education & Research Experiences</h2>
+          <p>Academic training and research appointments, shown in reverse chronological order.</p>
         </div>
       </div>
-      <div class="professor-info-card">
-        <div class="eyebrow">Research Philosophy</div>
-        <blockquote>“SEE” the interface first — then engineer the reaction.</blockquote>
-        <p>We aim to connect spectroscopy, electrochemistry, and materials chemistry so that catalyst design is guided by what actually happens under operating conditions.</p>
+      <div class="timeline">
+        <div class="timeline-row"><div class="timeline-date">09/2026 – Present</div><div class="timeline-main"><strong>Associate Professor</strong><div class="institution">Department of Chemical and Biological Engineering, Sookmyung Women’s University</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">04/2026 – 08/2026</div><div class="timeline-main"><strong>Associate Professor</strong><div class="institution">Department of Chemical Engineering, Changwon National University</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">03/2022 – 03/2026</div><div class="timeline-main"><strong>Assistant Professor</strong><div class="institution">Department of Chemical Engineering, Changwon National University</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">11/2017 – 02/2022</div><div class="timeline-main"><strong>Post-Doctoral Researcher</strong><div class="institution">Group of Prof. Xile Hu, EPFL</div><p>Research topic: “Fundamentals and Applications of Inorganic Oxygen Evolution Catalysts.”</p></div></div>
+        <div class="timeline-row"><div class="timeline-date">03/2014 – 08/2017</div><div class="timeline-main"><strong>Ph.D., Gwangju Institute of Science and Technology (GIST)</strong><div class="institution">Supervisor: Prof. Dr. Jaeyoung Lee</div><p>Thesis: “Insight into electrochemical conversion of CO₂ to multi-carbon fuels on Cu-based electrode.”</p></div></div>
+        <div class="timeline-row"><div class="timeline-date">08/2014</div><div class="timeline-main"><strong>Visiting Scientist, Catalysis Research Center</strong><div class="institution">Hokkaido University, Japan · Prof. Masatoshi Osawa</div><p>Research on Surface Enhanced Infrared Absorption Spectroscopy (SEIRAS) coupled with electrocatalysis.</p></div></div>
+        <div class="timeline-row"><div class="timeline-date">03/2012 – 02/2014</div><div class="timeline-main"><strong>M.Sc., Gwangju Institute of Science and Technology (GIST)</strong><div class="institution">Supervisor: Prof. Dr. Jaeyoung Lee</div><p>Thesis: “Electrochemical conversion of gas-phase CO₂ to formic acid on SnO₂ electrode.”</p></div></div>
+        <div class="timeline-row"><div class="timeline-date">02/2006 – 02/2012</div><div class="timeline-main"><strong>B.E., Inha University</strong><div class="institution">Advisor: Prof. Geon Joong Kim</div><p>Final-year project: “Microwave system for drying food-wastes.”</p></div></div>
+      </div>
+    </section>
+
+    <section class="cv-section reveal">
+      <div class="cv-section-head">
+        <div class="num">03</div>
+        <div>
+          <h2>Awards & Honors</h2>
+          <p>Selected awards, fellowships, and scholarships listed in the curriculum vitae.</p>
+        </div>
+      </div>
+      <div class="awards">
+        <article class="award-card"><div class="award-year">02/2026</div><h3>CWNU WOLF RESEARCH AWARD</h3></article>
+        <article class="award-card"><div class="award-year">04/2019 – 03/2021</div><h3>Marie Skłodowska-Curie Actions</h3><p>European Commission · €203,149.44 total.</p></article>
+        <article class="award-card"><div class="award-year">12/2016</div><h3>Top Student</h3><p>School of Environmental Science and Engineering, GIST.</p></article>
+        <article class="award-card"><div class="award-year">03/2015 – 08/2017</div><h3>Global Ph.D. Fellowship Program</h3><p>National Research Foundation of Korea · ₩30,000,000/year.</p></article>
+        <article class="award-card"><div class="award-year">03/2012 – 08/2017</div><h3>Full Korean Government Scholarship</h3><p>Gwangju Institute of Science and Technology (GIST).</p></article>
+        <article class="award-card"><div class="award-year">08/2010</div><h3>LG Chemistry Award</h3><p>Prior art research division of the 2010 Campus Patent Strategy Universiade.</p></article>
       </div>
     </section>
   </div>
@@ -69,4 +139,5 @@
 
 <footer class="footer"><div class="container"><div class="footer-grid"><div><h4>SEE Lab</h4><p>Sustainable Electrochemical Engineering Lab<br>Sookmyung Women’s University, Seoul, Korea</p></div><div><h4>Navigate</h4><p><a href="research.html">Research</a><br><a href="professor.html">Professor</a><br><a href="people.html">People</a><br><a href="publications.html">Publications</a></p></div><div><h4>Connect</h4><p><a href="news.html">News</a><br><a href="lab-life.html">Lab Life</a><br><a href="contact.html">Contact</a></p></div></div><div class="copyright">© 2026 Sustainable Electrochemical Engineering Lab (SEE Lab). All rights reserved.</div></div></footer>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
