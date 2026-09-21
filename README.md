@@ -1,16 +1,18 @@
-# SEE Lab — Blue/Navy v5
+SEE Lab multipage website package (blue–navy version)
 
-GitHub Pages upload-ready multipage website.
+Files:
+- index.html
+- research.html
+- people.html
+- publications.html
+- news.html
+- lab-life.html
+- contact.html
+- styles.css
+- app.js
+- assets/
 
-## Upload
-Upload **all files and the `assets/` folder to the repository root**. Do not upload only the ZIP.
-
-Required root files include `index.html`, `styles.css`, `app.js`, and the other HTML pages.
-
-## Pages
-Home / Research / People / Publications / News / Lab Life / Contact
-
-## Notes
-- The design is fully local and does not depend on external CSS frameworks.
-- Replace publication/member/contact placeholders before final public launch.
-- Replace abstract Lab Life tiles with real photos when available.
+Upload notes:
+1. Upload all files and the assets folder to the root of your GitHub repository.
+2. Do not upload the ZIP file itself; upload the unzipped contents.
+3. After replacing old files, refresh the live site with Ctrl+F5.
