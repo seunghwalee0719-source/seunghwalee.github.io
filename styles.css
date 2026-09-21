@@ -1,0 +1,98 @@
+:root{
+  --navy:#061a2e;
+  --navy2:#0b2843;
+  --ink:#0d2235;
+  --muted:#617485;
+  --cyan:#35d4d1;
+  --cyan2:#16b9c0;
+  --ice:#eef6f8;
+  --line:#dce7eb;
+  --white:#ffffff;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:#f7fafb;line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(5,26,46,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700;letter-spacing:.04em}
+.brand-mark{width:36px;height:36px;border:1.5px solid var(--cyan);border-radius:50%;position:relative;display:inline-block}
+.brand-mark::before{content:"";position:absolute;left:7px;right:7px;top:16px;height:2px;background:var(--cyan);box-shadow:0 -6px 0 rgba(53,212,209,.35),0 6px 0 rgba(53,212,209,.35)}
+.brand-mark::after{content:"";position:absolute;width:7px;height:7px;border:2px solid #fff;border-radius:50%;left:12px;top:12px;background:var(--navy)}
+.nav-links{display:flex;align-items:center;gap:26px;color:#e7f0f6;font-family:Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.07em}
+.nav-links a{padding:29px 0 25px;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a.active{color:var(--cyan);border-color:var(--cyan)}
+.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+.hero{min-height:620px;position:relative;display:flex;align-items:center;color:#fff;overflow:hidden;background:#06172a}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,15,29,.97) 0%,rgba(1,15,29,.9) 36%,rgba(1,15,29,.35) 62%,rgba(1,15,29,.12) 100%),url('assets/hero-electrochem.svg') center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(transparent,rgba(4,18,32,.35))}
+.hero-inner{position:relative;z-index:1;padding:86px 0 96px;max-width:720px}
+.kicker{font-family:Arial,sans-serif;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(48px,6vw,78px);line-height:1.03;margin:0 0 18px;letter-spacing:-.025em;font-weight:700}
+.hero h1 span{display:block;color:#6ee9e5;margin-top:10px}
+.hero .lab-name{font-size:22px;font-weight:700;margin:28px 0 3px}
+.hero .uni{font-size:17px;color:#e8eef4;margin:0}
+.hero .summary{font-size:21px;max-width:660px;margin:34px 0 32px;color:#f1f5f7;line-height:1.45}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:172px;padding:14px 24px;border-radius:999px;font-family:Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;transition:.2s}
+.btn.primary{background:var(--cyan2);color:#fff;border:1px solid var(--cyan2)}
+.btn.primary:hover{transform:translateY(-2px);background:#1bc8cb}
+.btn.ghost{border:1px solid rgba(255,255,255,.85);color:#fff;background:rgba(255,255,255,.04)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.section{padding:88px 0}
+.section.alt{background:#eef5f7}
+.eyebrow{font-family:Arial,sans-serif;color:#0aaeb5;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.section h2,.page-hero h1{font-size:clamp(34px,4vw,52px);line-height:1.12;margin:9px 0 18px;letter-spacing:-.02em}
+.lede{font-size:20px;color:#526878;max-width:760px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:38px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 12px 35px rgba(11,40,67,.06)}
+.card h3{font-size:24px;line-height:1.2;margin:12px 0 12px}
+.card p{margin:0;color:#5c7080}
+.icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:#def7f7;color:#058d94;font-family:Arial,sans-serif;font-weight:800}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+.visual-panel{min-height:360px;border-radius:22px;background:linear-gradient(145deg,#062239,#0b3858);position:relative;overflow:hidden;box-shadow:0 20px 55px rgba(5,30,49,.16)}
+.visual-panel::before{content:"";position:absolute;inset:0;background:url('assets/hero-electrochem.svg') center/cover;opacity:.72}
+.visual-panel::after{content:"Operando  •  Interface  •  Catalysis";position:absolute;left:24px;bottom:22px;color:#fff;font-family:Arial,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.feature-list{display:grid;gap:18px;margin-top:28px}
+.feature-item{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.feature-item b{font-size:17px}
+.feature-item p{margin:4px 0 0;color:#617485}
+.check{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#dff7f5;color:#0b999f;font-family:Arial,sans-serif;font-weight:900}
+.page-hero{padding:86px 0 72px;background:linear-gradient(135deg,#061a2e 0%,#0b314f 100%);color:#fff}
+.page-hero p{max-width:760px;color:#d8e4ea;font-size:19px}
+.content{padding:72px 0 96px}
+.person{display:grid;grid-template-columns:130px 1fr;gap:24px;align-items:center}
+.avatar{width:130px;height:130px;border-radius:18px;background:linear-gradient(145deg,#0a3555,#11aeb7);display:grid;place-items:center;color:#fff;font-size:42px;font-weight:700}
+.meta{font-family:Arial,sans-serif;color:#6a7d8b;font-size:14px}
+.pub-list{display:grid;gap:18px;margin-top:28px}
+.pub{background:#fff;border-left:4px solid var(--cyan2);border-radius:10px;padding:20px 22px;box-shadow:0 8px 22px rgba(10,40,63,.05)}
+.pub .journal{font-family:Arial,sans-serif;color:#0aaeb5;font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.news-list{display:grid;gap:16px;margin-top:28px}
+.news-item{display:grid;grid-template-columns:120px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid var(--line)}
+.news-date{font-family:Arial,sans-serif;color:#0aaeb5;font-weight:700;font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.gallery .tile{aspect-ratio:4/3;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(145deg,#0b2943,#0e5e70)}
+.gallery .tile::before{content:"";position:absolute;inset:0;background:url('assets/hero-electrochem.svg') center/cover;opacity:.78;transform:scale(1.12)}
+.gallery .tile:nth-child(2)::before{filter:hue-rotate(18deg);transform:scale(1.28) translateX(-4%)}
+.gallery .tile:nth-child(3)::before{filter:hue-rotate(-20deg);transform:scale(1.18) translateY(2%)}
+.gallery .tile:nth-child(4)::before{filter:saturate(.7);transform:scale(1.3) translateX(5%)}
+.gallery .tile:nth-child(5)::before{filter:hue-rotate(35deg);transform:scale(1.22) translateY(-5%)}
+.gallery .tile:nth-child(6)::before{filter:brightness(1.18);transform:scale(1.24)}
+.tile span{position:absolute;left:16px;bottom:14px;color:#fff;font-family:Arial,sans-serif;font-size:13px;background:rgba(0,0,0,.35);padding:7px 10px;border-radius:999px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+.footer{background:#05182a;color:#d9e6ec;padding:48px 0 34px}
+.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:30px}
+.footer h4{color:#fff;margin:0 0 12px}.footer p,.footer a{color:#a9bbc7;font-family:Arial,sans-serif;font-size:14px}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:20px;color:#8196a4;font-family:Arial,sans-serif;font-size:12px}
+.note{background:#fff8dd;border:1px solid #f4e5a6;border-radius:12px;padding:14px 16px;color:#796a2a;font-family:Arial,sans-serif;font-size:14px;margin-top:20px}
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;left:0;right:0;top:76px;background:#061a2e;flex-direction:column;align-items:flex-start;padding:18px 24px 26px;gap:0;border-top:1px solid rgba(255,255,255,.08)}
+  .nav-links.open{display:flex}.nav-links a{width:100%;padding:13px 0}.menu-toggle{display:block}
+  .hero{min-height:560px}.hero::before{background:linear-gradient(90deg,rgba(1,15,29,.98) 0%,rgba(1,15,29,.9) 58%,rgba(1,15,29,.55) 100%),url('assets/hero-electrochem.svg') 60% center/cover no-repeat}
+  .hero-inner{padding:72px 0 82px;max-width:650px}.hero .summary{font-size:18px}.grid-3,.grid-2,.split,.contact-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.person{grid-template-columns:100px 1fr}.avatar{width:100px;height:100px}.news-item{grid-template-columns:1fr;gap:6px}
+}
+@media(max-width:560px){.container{width:min(var(--max),calc(100% - 28px))}.hero h1{font-size:45px}.hero .lab-name{font-size:19px}.cta-row{flex-direction:column;align-items:flex-start}.btn{min-width:190px}.grid-3,.gallery{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.section{padding:64px 0}.page-hero{padding:62px 0 52px}}
