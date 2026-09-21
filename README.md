@@ -1,18 +1,9 @@
-SEE Lab multipage website package (blue–navy version)
+SEE Lab website — Blue/Navy + White inner-page version (v7)
 
-Files:
-- index.html
-- research.html
-- people.html
-- publications.html
-- news.html
-- lab-life.html
-- contact.html
-- styles.css
-- app.js
-- assets/
+Design logic:
+- index.html: keeps the dark blue/navy hero with catalyst + bubbles + spectrum background.
+- research.html / people.html / publications.html / news.html / lab-life.html / contact.html:
+  navy/blue hero headers + bright white/light-blue content areas.
 
-Upload notes:
-1. Upload all files and the assets folder to the root of your GitHub repository.
-2. Do not upload the ZIP file itself; upload the unzipped contents.
-3. After replacing old files, refresh the live site with Ctrl+F5.
+Upload all unzipped files to the root of the GitHub repository.
+After upload, use Ctrl+F5 on the live website to bypass old browser cache.
