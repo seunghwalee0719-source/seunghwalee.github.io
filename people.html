@@ -50,6 +50,7 @@
     .people-panel{display:none;}
     .people-panel.active{display:block;}
 
+    /* Current members */
     .member-card{
       padding:0;
       overflow:hidden;
@@ -88,32 +89,106 @@
       margin-top:10px;
     }
 
-    .alumni-box{
+    /* Alumni: two people per row */
+    .alumni-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px;
+    }
+
+    .alumni-card{
       background:#fff;
       border:1px solid #dbe7f1;
       border-radius:22px;
-      padding:30px;
+      overflow:hidden;
       box-shadow:0 14px 38px rgba(17,60,96,.08);
     }
 
-    .alumni-box h3{
+    .alumni-photos{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1px;
+      background:#dbe7f1;
+      border-bottom:1px solid #dbe7f1;
+    }
+
+    .alumni-photo{
+      aspect-ratio:4/3;
+      min-height:210px;
+      display:grid;
+      place-items:center;
+      background:
+        radial-gradient(circle at 75% 20%,rgba(80,215,234,.18),transparent 22%),
+        linear-gradient(145deg,#f4faff,#e8f2f9);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .alumni-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .alumni-photo svg{
+      width:110px;
+      height:110px;
+      display:block;
+    }
+
+    .photo-label{
+      position:absolute;
+      left:12px;
+      bottom:10px;
+      padding:6px 9px;
+      border-radius:8px;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#fff;
+      background:rgba(7,34,60,.70);
+      backdrop-filter:blur(5px);
+    }
+
+    .alumni-info{
+      padding:24px 26px 26px;
+    }
+
+    .alumni-info h3{
       font-family:Georgia,'Times New Roman',serif;
       font-size:26px;
       color:#10263f;
-      margin:0 0 9px;
+      margin:8px 0 8px;
     }
 
-    .alumni-box p{
+    .alumni-info p{
       margin:0;
       color:#5a738a;
-      font-size:15px;
+      font-size:14px;
       line-height:1.72;
+    }
+
+    .alumni-meta{
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#0e73d8;
+    }
+
+    @media(max-width:800px){
+      .alumni-grid{
+        grid-template-columns:1fr;
+      }
     }
 
     @media(max-width:640px){
       .people-tabs{gap:8px;}
       .people-tab{flex:1;padding:10px 15px;}
       .member-visual{height:210px;}
+      .alumni-photo{min-height:165px;}
     }
   </style>
 </head>
@@ -144,7 +219,16 @@
   </div>
 </header>
 
-
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">People</div>
+    <h1>The researchers behind SEE Lab.</h1>
+    <p>
+      We bring together electrochemistry, spectroscopy, catalysis, and chemical engineering
+      to study sustainable reactions from the interface outward.
+    </p>
+  </div>
+</section>
 
 <main class="content">
   <div class="container">
@@ -237,24 +321,81 @@
 
     <!-- ALUMNI -->
     <section id="alumni-panel" class="people-panel" role="tabpanel">
-      <div class="alumni-box">
-        <h3>Alumni</h3>
-        <p>
-          Former SEE Lab members can be listed here with name, degree,
-          graduation year, research topic, and current affiliation.
-        </p>
-      </div>
-    </section>
+      <div class="alumni-grid">
 
-    <section class="section alt"
-             style="margin-top:74px;border-radius:26px;padding-left:34px;padding-right:34px">
-      <div class="eyebrow">Group Culture</div>
-      <h2>Curiosity, rigor, and collaboration.</h2>
-      <p class="lede">
-        We value careful experiments, open discussion, reproducible analysis,
-        and a strong connection between fundamental science and practical
-        electrochemical engineering.
-      </p>
+        <article class="alumni-card">
+          <div class="alumni-photos">
+            <div class="alumni-photo">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <circle cx="90" cy="58" r="34" fill="#8dcdf6"/>
+                <path d="M35 157c5-39 27-59 55-59s50 20 55 59" fill="#2177c4"/>
+              </svg>
+              <span class="photo-label">Photo 1</span>
+            </div>
+            <div class="alumni-photo">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <rect x="35" y="45" width="110" height="90" rx="16" fill="#bfe1f4"/>
+                <circle cx="90" cy="90" r="24" fill="#3b8cc5"/>
+              </svg>
+              <span class="photo-label">Photo 2</span>
+            </div>
+          </div>
+          <div class="alumni-info">
+            <div class="alumni-meta">Alumni 01</div>
+            <h3>Name</h3>
+            <p>Degree / graduation year / research topic / current affiliation</p>
+          </div>
+        </article>
+
+        <article class="alumni-card">
+          <div class="alumni-photos">
+            <div class="alumni-photo">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <circle cx="90" cy="58" r="34" fill="#8ddde6"/>
+                <path d="M35 157c5-39 27-59 55-59s50 20 55 59" fill="#268eae"/>
+              </svg>
+              <span class="photo-label">Photo 1</span>
+            </div>
+            <div class="alumni-photo">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <rect x="35" y="45" width="110" height="90" rx="16" fill="#c8edf1"/>
+                <circle cx="90" cy="90" r="24" fill="#45a4b9"/>
+              </svg>
+              <span class="photo-label">Photo 2</span>
+            </div>
+          </div>
+          <div class="alumni-info">
+            <div class="alumni-meta">Alumni 02</div>
+            <h3>Name</h3>
+            <p>Degree / graduation year / research topic / current affiliation</p>
+          </div>
+        </article>
+
+        <article class="alumni-card">
+          <div class="alumni-photos">
+            <div class="alumni-photo">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <circle cx="90" cy="58" r="34" fill="#9cc8ef"/>
+                <path d="M35 157c5-39 27-59 55-59s50 20 55 59" fill="#3d75b7"/>
+              </svg>
+              <span class="photo-label">Photo 1</span>
+            </div>
+            <div class="alumni-photo">
+              <svg viewBox="0 0 180 180" aria-hidden="true">
+                <rect x="35" y="45" width="110" height="90" rx="16" fill="#d5e7f7"/>
+                <circle cx="90" cy="90" r="24" fill="#608cc5"/>
+              </svg>
+              <span class="photo-label">Photo 2</span>
+            </div>
+          </div>
+          <div class="alumni-info">
+            <div class="alumni-meta">Alumni 03</div>
+            <h3>Name</h3>
+            <p>Degree / graduation year / research topic / current affiliation</p>
+          </div>
+        </article>
+
+      </div>
     </section>
 
   </div>
