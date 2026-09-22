@@ -12,9 +12,12 @@
     .cv-profile{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:center;margin-bottom:64px}
     .cv-photo{height:350px;border-radius:24px;overflow:hidden;background:#e9f1f7;border:1px solid #d4e2ec;box-shadow:0 20px 52px rgba(15,64,101,.14)}
     .cv-photo img{width:100%;height:100%;object-fit:cover;object-position:center 34%}
-    .cv-name h2{font-family:Georgia,'Times New Roman',serif;font-size:56px;line-height:1.04;letter-spacing:-.03em;color:#10263f;margin:0 0 10px}
-    .cv-name .cv-label{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#0d78c9;margin-bottom:16px}
-    .cv-name .cv-quote{font-family:Georgia,'Times New Roman',serif;font-size:27px;line-height:1.42;color:#214a6d;margin:0;max-width:740px}
+    .cv-name .cv-label{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#0d78c9;margin-bottom:13px}
+    .cv-position{font-family:Georgia,'Times New Roman',serif;font-size:38px;line-height:1.12;letter-spacing:-.02em;color:#10263f;margin:0 0 9px}
+    .cv-affiliation{font-size:16px;line-height:1.55;color:#4e6d86;margin:0 0 22px;font-weight:650}
+    .cv-keywords{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+    .cv-keyword{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;background:#fff;border:1px solid #d5e5ef;color:#165581;font-size:12px;font-weight:800;box-shadow:0 5px 14px rgba(23,78,119,.05)}
+    .cv-name .cv-quote{font-family:Georgia,'Times New Roman',serif;font-size:24px;line-height:1.48;color:#214a6d;margin:0;max-width:760px}
 
     .cv-section{padding:56px 0;border-top:1px solid #d8e6ef}
     .cv-section:first-of-type{border-top:0;padding-top:0}
@@ -42,12 +45,12 @@
     .award-card p{margin:0;color:#657c90;font-size:13px;line-height:1.65}
 
     @media(max-width:900px){
-      .cv-profile{grid-template-columns:220px 1fr;gap:32px}.cv-photo{height:300px}.cv-name h2{font-size:48px}
+      .cv-profile{grid-template-columns:220px 1fr;gap:32px}.cv-photo{height:300px}.cv-position{font-size:34px}
       .cv-section-head{grid-template-columns:1fr;gap:8px}.interest-grid,.timeline,.awards{margin-left:0}.cv-section-head .num{font-size:25px}
     }
     @media(max-width:640px){
       .cv-content{padding:52px 0 72px}.cv-profile{grid-template-columns:1fr;gap:24px;margin-bottom:48px}.cv-photo{width:min(100%,320px);height:390px}
-      .cv-name h2{font-size:43px}.cv-name .cv-quote{font-size:23px}.cv-section{padding:44px 0}.cv-section-head h2{font-size:36px}
+      .cv-position{font-size:32px}.cv-name .cv-quote{font-size:21px}.cv-section{padding:44px 0}.cv-section-head h2{font-size:36px}
       .timeline-row{grid-template-columns:1fr;gap:5px;padding-left:24px}.awards{grid-template-columns:1fr}
     }
   </style>
@@ -55,21 +58,65 @@
 <body class="page-light">
 <header class="site-header"><div class="container nav"><div class="brand-wrap"><a class="brand" href="index.html">SEE LAB</a><div class="brand-sub">Sustainable Electrochemical<br>Engineering Lab</div></div><button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="research.html">Research</a><a class="active" href="professor.html">Professor</a><a href="people.html">People</a><a href="publications.html">Publications</a><a href="news.html">News</a><a href="lab-life.html">Lab Life</a><a href="contact.html">Contact</a></nav><div class="search-circle">⌕</div></div></header>
 
+<section class="page-hero professor-page-hero">
+  <div class="container">
+    <div class="eyebrow">Professor</div>
+    <h1>Seunghwa Lee</h1>
+    <p>Research interests, education and research experience, and selected awards & honors.</p>
+  </div>
+</section>
 
 <main class="cv-content">
   <div class="container">
     <section class="cv-profile reveal">
       <div class="cv-photo"><img src="assets/professor-seunghwa-lee.jpg" alt="Seunghwa Lee"></div>
       <div class="cv-name">
-        <h2>Prof. Seunghwa Lee</h2>
-        <p class="cv-quote">“There Is No Secret Ingredient" - Kung Fu Panda</p>
+        <div class="cv-label">Principal Investigator</div>
+        <h2 class="cv-position">Associate Professor</h2>
+        <p class="cv-affiliation">
+          Department of Chemical and Biological Engineering<br>
+          Sookmyung Women’s University
+        </p>
+
+        <div class="cv-keywords" aria-label="Research keywords">
+          <span class="cv-keyword">Electrocatalysis</span>
+          <span class="cv-keyword">Electrochemical Interfaces</span>
+          <span class="cv-keyword">Operando Spectroscopy</span>
+          <span class="cv-keyword">Catalyst Durability</span>
+        </div>
+
+        <p class="cv-quote">
+          “Understanding catalysts under working conditions to design more durable electrochemical interfaces.”
+        </p>
       </div>
     </section>
 
-    
     <section class="cv-section reveal">
       <div class="cv-section-head">
         <div class="num">01</div>
+        <div>
+          <h2>Research Interests</h2>
+          <p>Core research areas listed in the curriculum vitae.</p>
+        </div>
+      </div>
+      <div class="interest-grid">
+        <span class="interest-chip">Electrocatalysis</span>
+        <span class="interest-chip">Operando / In-situ Analysis</span>
+        <span class="interest-chip">FTIR</span>
+        <span class="interest-chip">Raman</span>
+        <span class="interest-chip">UV-Vis</span>
+        <span class="interest-chip">ICP-MS</span>
+        <span class="interest-chip">Water Electrolysis</span>
+        <span class="interest-chip">CO₂ Electrolysis</span>
+        <span class="interest-chip">Fuel Cells</span>
+        <span class="interest-chip">Battery Analysis</span>
+        <span class="interest-chip">Electrochemical Fuel Synthesis</span>
+      </div>
+    </section>
+
+    <section class="cv-section reveal">
+      <div class="cv-section-head">
+        <div class="num">02</div>
         <div>
           <h2>Education & Research Experiences</h2>
           <p>Academic training and research appointments, shown in reverse chronological order.</p>
@@ -89,7 +136,7 @@
 
     <section class="cv-section reveal">
       <div class="cv-section-head">
-        <div class="num">02</div>
+        <div class="num">03</div>
         <div>
           <h2>Awards & Honors</h2>
           <p>Selected awards, fellowships, and scholarships listed in the curriculum vitae.</p>
