@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Publications | SEE Lab</title>
-  <meta name="description" content="Publications from SEE Lab">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Publications | SEE Lab</title>
+<meta content="Publications from SEE Lab" name="description"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
     .pub-links {
       display:flex; flex-wrap:wrap; gap:12px; margin:0 0 34px;
     }
@@ -55,359 +56,423 @@
       text-transform:uppercase; color:#0f6fc4;
     }
       .pub-list{opacity:1 !important;transform:none !important;}
-  </style>
+  
+    .publication-tabs{
+      display:flex;
+      gap:10px;
+      margin:30px 0 28px;
+      padding-bottom:12px;
+      border-bottom:1px solid #dce8f2;
+    }
+    .publication-tab{
+      appearance:none;
+      border:1px solid #cbddeb;
+      background:#fff;
+      color:#234866;
+      padding:11px 24px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.03em;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+    .publication-tab:hover{
+      border-color:#7fb8e8;
+      color:#0e5fae;
+      transform:translateY(-1px);
+    }
+    .publication-tab.active{
+      color:#fff;
+      border-color:transparent;
+      background:linear-gradient(90deg,#0f5fae,#1d7dd8);
+      box-shadow:0 10px 24px rgba(15,95,174,.16);
+    }
+    .publication-panel{display:none;}
+    .publication-panel.active{display:block;}
+    @media(max-width:640px){
+      .publication-tabs{gap:8px;}
+      .publication-tab{flex:1;padding:10px 14px;}
+    }
+</style>
 </head>
 <body class="page-light">
-<header class="site-header"><div class="container nav"><div class="brand-wrap"><a class="brand" href="index.html">SEE LAB</a><div class="brand-sub">Sustainable Electrochemical<br>Engineering Lab</div></div><button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="research.html">Research</a><a href="professor.html">Professor</a><a href="people.html">People</a><a class="active" href="publications.html">Publications</a><a href="news.html">News</a><a href="lab-life.html">Lab Life</a><a href="contact.html">Contact</a></nav><div class="search-circle">⌕</div></div></header>
-
+<header class="site-header"><div class="container nav"><div class="brand-wrap"><a class="brand" href="index.html">SEE LAB</a><div class="brand-sub">Sustainable Electrochemical<br/>Engineering Lab</div></div><button aria-expanded="false" aria-label="Open menu" class="menu-toggle">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="research.html">Research</a><a href="professor.html">Professor</a><a href="people.html">People</a><a class="active" href="publications.html">Publications</a><a href="news.html">News</a><a href="lab-life.html">Lab Life</a><a href="contact.html">Contact</a></nav><div class="search-circle">⌕</div></div></header>
 <main class="content">
-  <div class="container">
-    <div class="page-intro">
-      <h1>Publications</h1>
-      <p>Peer-reviewed publications and patents from our studies.</p>
-    </div>
+<div class="container">
+<div class="page-intro">
+<h1>Publications</h1>
+<p>Peer-reviewed publications, conference proceedings, and patents listed in Seunghwa Lee’s curriculum vitae.</p>
+</div>
+<div class="pub-links">
+<a class="pub-link primary" href="https://scholar.google.co.kr/citations?user=yawaYN0AAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">Google Scholar ↗</a>
+<a class="pub-link" href="https://orcid.org/0000-0002-5988-4440" rel="noopener noreferrer" target="_blank">ORCID ↗</a>
+</div>
 
-    <div class="pub-links">
-      <a class="pub-link primary" href="https://scholar.google.co.kr/citations?user=yawaYN0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
-      <a class="pub-link" href="https://orcid.org/0000-0002-5988-4440" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
-    </div>
 
-    <div class="section-label">Peer-reviewed Scientific Journals</div>
-    <div class="pub-list">
-      <div class="year-divider"><span>2026</span></div>
+
+
+
+
+
+<div aria-label="Publication years" class="publication-tabs" role="tablist">
+<button aria-selected="true" class="publication-tab active" data-target="pub-2026" role="tab" type="button">2026</button>
+<button aria-selected="false" class="publication-tab" data-target="pub-older" role="tab" type="button">2025 &amp; Earlier</button>
+</div>
+<section class="publication-panel active" id="pub-2026" role="tabpanel">
+<div class="section-label">Peer-reviewed Scientific Journals</div>
+<div class="pub-list">
+<div class="year-divider"><span>2026</span></div>
 <article class="pub">
-              <div class="journal">Chemical Communications</div>
-              <h3>Transition-metal selenides in oxygen evolution electrocatalysis: from pre-catalysts to active regulators</h3>
-              <p class="authors">S. Lee*</p>
-              <p class="citation">2026, Online published.</p>
-            </article>
+<div class="journal">Chemical Communications</div>
+<h3>Transition-metal selenides in oxygen evolution electrocatalysis: from pre-catalysts to active regulators</h3>
+<p class="authors">S. Lee*</p>
+<p class="citation">2026, Online published.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Materials Chemistry A</div>
-              <h3>Oxygen-Bridged Fe-Ni Heterointerfaces Confined in Hierarchical Mox C/N-Doped Carbon Enable Bifunctional Pathway for Efficient Oxygen Evolution</h3>
-              <p class="authors">C. J. Kim†, S. Ha†, Y. J. Lee, Y. M. Kim, H. J. Kim, H. Jang, S. Lee*, S.-K. Park*</p>
-              <p class="citation">2026, Online published.</p>
-            </article>
+<div class="journal">Journal of Materials Chemistry A</div>
+<h3>Oxygen-Bridged Fe-Ni Heterointerfaces Confined in Hierarchical Mox C/N-Doped Carbon Enable Bifunctional Pathway for Efficient Oxygen Evolution</h3>
+<p class="authors">C. J. Kim†, S. Ha†, Y. J. Lee, Y. M. Kim, H. J. Kim, H. Jang, S. Lee*, S.-K. Park*</p>
+<p class="citation">2026, Online published.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Materials Chemistry A</div>
-              <h3>Synergistic geometric and electronic modulation in Ni–Ce layered double hydroxides for enhanced oxygen evolution reaction</h3>
-              <p class="authors">H. S. Chavan, Y. Kim, S. Ha, S. Han, S. Lee*</p>
-              <p class="citation">2026, 14, 6354.</p>
-            </article>
+<div class="journal">Journal of Materials Chemistry A</div>
+<h3>Synergistic geometric and electronic modulation in Ni–Ce layered double hydroxides for enhanced oxygen evolution reaction</h3>
+<p class="authors">H. S. Chavan, Y. Kim, S. Ha, S. Han, S. Lee*</p>
+<p class="citation">2026, 14, 6354.</p>
+</article>
 <article class="pub">
-              <div class="journal">ChemPhysChem</div>
-              <h3>Residual Selenium–Assisted Oxidation Pathway Modulation in Cobalt Selenide for Enhanced Oxygen Evolution Reaction</h3>
-              <p class="authors">Y. Jang, S. Lee*</p>
-              <p class="citation">2026, 27, e202500477.</p>
-            </article>
+<div class="journal">ChemPhysChem</div>
+<h3>Residual Selenium–Assisted Oxidation Pathway Modulation in Cobalt Selenide for Enhanced Oxygen Evolution Reaction</h3>
+<p class="authors">Y. Jang, S. Lee*</p>
+<p class="citation">2026, 27, e202500477.</p>
+</article>
+</div>
+</section>
+<section class="publication-panel" id="pub-older" role="tabpanel">
+<div class="section-label">Peer-reviewed Scientific Journals</div>
+<div class="pub-list">
 <div class="year-divider"><span>2025</span></div>
 <article class="pub">
-              <div class="journal">ACS Nano</div>
-              <h3>Architecting Layered CoFeOOH for the Oxygen Evolution Reaction: Engineering Structure for an Anion Exchange Membrane Water Electrolyzer</h3>
-              <p class="authors">N. I. Kim†, Y. Kim†, J. Lee†, G. Park, S. Jin, J. Park, J. S. Ha, C. Kim, M. Park, J. Ryu, D. Ahn, Y.-T. Kim, Y. Kim, Y. S. Park, J. Lee*, S. Lee*, S. M. Choi*</p>
-              <p class="citation">2025, 19, 41704.</p>
-            </article>
+<div class="journal">ACS Nano</div>
+<h3>Architecting Layered CoFeOOH for the Oxygen Evolution Reaction: Engineering Structure for an Anion Exchange Membrane Water Electrolyzer</h3>
+<p class="authors">N. I. Kim†, Y. Kim†, J. Lee†, G. Park, S. Jin, J. Park, J. S. Ha, C. Kim, M. Park, J. Ryu, D. Ahn, Y.-T. Kim, Y. Kim, Y. S. Park, J. Lee*, S. Lee*, S. M. Choi*</p>
+<p class="citation">2025, 19, 41704.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Electroanalytical Chemistry</div>
-              <h3>Enhanced oxygen evolution reaction activity and stability through Fe and Cr Co-incorporation in cobalt hydroxide</h3>
-              <p class="authors">H. S. Chavan, D. R. Patil, J.-E. Yoo, J. Kim, Y. Choi, S. Lee, K. Lee</p>
-              <p class="citation">2025, 992, 119249.</p>
-            </article>
+<div class="journal">Journal of Electroanalytical Chemistry</div>
+<h3>Enhanced oxygen evolution reaction activity and stability through Fe and Cr Co-incorporation in cobalt hydroxide</h3>
+<p class="authors">H. S. Chavan, D. R. Patil, J.-E. Yoo, J. Kim, Y. Choi, S. Lee, K. Lee</p>
+<p class="citation">2025, 992, 119249.</p>
+</article>
 <article class="pub">
-              <div class="journal">Chemical Engineering Journal</div>
-              <h3>Residual selenium in electrochemically selenized nickel-iron electrodes enables highly active and durable alkaline water electrolysis</h3>
-              <p class="authors">Y. Jang, Y. Kim, J. Ahn, S. Lee*</p>
-              <p class="citation">2025, 522, 167794.</p>
-            </article>
+<div class="journal">Chemical Engineering Journal</div>
+<h3>Residual selenium in electrochemically selenized nickel-iron electrodes enables highly active and durable alkaline water electrolysis</h3>
+<p class="authors">Y. Jang, Y. Kim, J. Ahn, S. Lee*</p>
+<p class="citation">2025, 522, 167794.</p>
+</article>
 <article class="pub">
-              <div class="journal">Advanced Science</div>
-              <h3>Sacrificial Template-Derived CoMo-LDH Gas Diffusion Electrode for Anion Exchange Membrane Water Electrolysis</h3>
-              <p class="authors">S. J. Lee†, Y. Park†, S. H. Lee†, S. H. Park, I. T. Kim, Y. Kim, B. S. Soh, G. H. Kim, J. Lee*, S. Lee*, K. Shin*, Y. S. Park*</p>
-              <p class="citation">2025, 12, e08370.</p>
-            </article>
+<div class="journal">Advanced Science</div>
+<h3>Sacrificial Template-Derived CoMo-LDH Gas Diffusion Electrode for Anion Exchange Membrane Water Electrolysis</h3>
+<p class="authors">S. J. Lee†, Y. Park†, S. H. Lee†, S. H. Park, I. T. Kim, Y. Kim, B. S. Soh, G. H. Kim, J. Lee*, S. Lee*, K. Shin*, Y. S. Park*</p>
+<p class="citation">2025, 12, e08370.</p>
+</article>
 <article class="pub">
-              <div class="journal">Applied Surface Science Advances</div>
-              <h3>Copper hydroxide nanosheets: Synthesis, structural analysis, and electrochemical performance evaluation</h3>
-              <p class="authors">H. S. Jang†, M. K. Kim†, D. Lee, Y. Kim, Y. Jang, S. Lee*, J. Hong*, G. H. Ryu*</p>
-              <p class="citation">2025, 28, 100795.</p>
-            </article>
+<div class="journal">Applied Surface Science Advances</div>
+<h3>Copper hydroxide nanosheets: Synthesis, structural analysis, and electrochemical performance evaluation</h3>
+<p class="authors">H. S. Jang†, M. K. Kim†, D. Lee, Y. Kim, Y. Jang, S. Lee*, J. Hong*, G. H. Ryu*</p>
+<p class="citation">2025, 28, 100795.</p>
+</article>
 <article class="pub">
-              <div class="journal">Nano Letters</div>
-              <h3>Impurity-driven interfacial reconstruction unlocks highly active sites in Ni–Fe selenides for water oxidation</h3>
-              <p class="authors">Y. Jang, M. K. Son, S. Lee*</p>
-              <p class="citation">2025, 31, 11970.</p>
-            </article>
+<div class="journal">Nano Letters</div>
+<h3>Impurity-driven interfacial reconstruction unlocks highly active sites in Ni–Fe selenides for water oxidation</h3>
+<p class="authors">Y. Jang, M. K. Son, S. Lee*</p>
+<p class="citation">2025, 31, 11970.</p>
+</article>
 <article class="pub">
-              <div class="journal">Materials Today Nano</div>
-              <h3>Optimised Synthesis of Ni-Co Hydroxide Nanosheets: Effects on Structural and Electrochemical Properties</h3>
-              <p class="authors">M. Lee, Y. Jang, S. Lee*, G. H. Ryu*</p>
-              <p class="citation">2025, 30, 100612.</p>
-            </article>
+<div class="journal">Materials Today Nano</div>
+<h3>Optimised Synthesis of Ni-Co Hydroxide Nanosheets: Effects on Structural and Electrochemical Properties</h3>
+<p class="authors">M. Lee, Y. Jang, S. Lee*, G. H. Ryu*</p>
+<p class="citation">2025, 30, 100612.</p>
+</article>
 <article class="pub">
-              <div class="journal">Applied Surface Science</div>
-              <h3>Facile synthesis and electrochemical properties of FeO/Fe(OH)3 nanosheets</h3>
-              <p class="authors">G. Yoon†, Y. Jang†, H. S. Jang, S. Lee*, G. H. Ryu*</p>
-              <p class="citation">2025, 682, 161621.</p>
-            </article>
+<div class="journal">Applied Surface Science</div>
+<h3>Facile synthesis and electrochemical properties of FeO/Fe(OH)3 nanosheets</h3>
+<p class="authors">G. Yoon†, Y. Jang†, H. S. Jang, S. Lee*, G. H. Ryu*</p>
+<p class="citation">2025, 682, 161621.</p>
+</article>
 <article class="pub">
-              <div class="journal">ACS Applied Energy Materials</div>
-              <h3>Plasma-Engineered 2D Ni Nanoplates as Advanced Oxygen Evolution Reaction Electrocatalysts for Direct Seawater Electrolysis</h3>
-              <p class="authors">S. Kim, S. Kim, Y. Han, Y. Kim, S. Lee*, J. Yang, S. M. Choi, O. L. Li*</p>
-              <p class="citation">2025, 8, 1101.</p>
-            </article>
+<div class="journal">ACS Applied Energy Materials</div>
+<h3>Plasma-Engineered 2D Ni Nanoplates as Advanced Oxygen Evolution Reaction Electrocatalysts for Direct Seawater Electrolysis</h3>
+<p class="authors">S. Kim, S. Kim, Y. Han, Y. Kim, S. Lee*, J. Yang, S. M. Choi, O. L. Li*</p>
+<p class="citation">2025, 8, 1101.</p>
+</article>
 <article class="pub">
-              <div class="journal">Angewandte Chemie International Edition</div>
-              <h3>Operando Nanoscale Characterization Reveals Fe Doping of Ni Oxide Enhances Oxygen Evolution Reaction via Fragmentation and Formation of Dual Active Sites</h3>
-              <p class="authors">Y. Liang, S. O. Parreiras, S. Lee, K. Banjac, V. Boureau, J. M. Gallego, X. Hu, D. Écija, M. Lingenfelder</p>
-              <p class="citation">2025, 64, e202419521.</p>
-            </article>
+<div class="journal">Angewandte Chemie International Edition</div>
+<h3>Operando Nanoscale Characterization Reveals Fe Doping of Ni Oxide Enhances Oxygen Evolution Reaction via Fragmentation and Formation of Dual Active Sites</h3>
+<p class="authors">Y. Liang, S. O. Parreiras, S. Lee, K. Banjac, V. Boureau, J. M. Gallego, X. Hu, D. Écija, M. Lingenfelder</p>
+<p class="citation">2025, 64, e202419521.</p>
+</article>
 <article class="pub">
-              <div class="journal">Advanced Energy Materials</div>
-              <h3>Unveiling the Aluminum Doping Effects of In-Situ Transmogrified Dual-LDH Heterostructure and Its Fermi-Level Alignment to Water Splitting Potentials</h3>
-              <p class="authors">N. Manivelan, J. Piao, J. Kim, S. Lee, Y. Kim, V. Soundharrajan, M.-K. Son, A. Humayun, M. D. Ganji, H. Ko, K. Prabakar</p>
-              <p class="citation">2025, 15, 2403889.</p>
-            </article>
+<div class="journal">Advanced Energy Materials</div>
+<h3>Unveiling the Aluminum Doping Effects of In-Situ Transmogrified Dual-LDH Heterostructure and Its Fermi-Level Alignment to Water Splitting Potentials</h3>
+<p class="authors">N. Manivelan, J. Piao, J. Kim, S. Lee, Y. Kim, V. Soundharrajan, M.-K. Son, A. Humayun, M. D. Ganji, H. Ko, K. Prabakar</p>
+<p class="citation">2025, 15, 2403889.</p>
+</article>
 <div class="year-divider"><span>2024</span></div>
 <article class="pub">
-              <div class="journal">Journal of Physical Chemistry Letters</div>
-              <h3>Revealing Enhanced Active Oxygen Formation by Incorporating Chromium into Nickel Hydroxide Nanosheets for Improved Oxygen Evolution Reaction</h3>
-              <p class="authors">S. Lee*, S. Ha</p>
-              <p class="citation">2024, 15, 10230.</p>
-            </article>
+<div class="journal">Journal of Physical Chemistry Letters</div>
+<h3>Revealing Enhanced Active Oxygen Formation by Incorporating Chromium into Nickel Hydroxide Nanosheets for Improved Oxygen Evolution Reaction</h3>
+<p class="authors">S. Lee*, S. Ha</p>
+<p class="citation">2024, 15, 10230.</p>
+</article>
 <article class="pub">
-              <div class="journal">International Journal of Hydrogen Energy</div>
-              <h3>Synergistic effects of water content and synthesis temperature on tailoring oxalate-derived nickel–iron (Oxy) hydroxide for improving oxygen evolution reaction</h3>
-              <p class="authors">Y. Kim, K. Lee, J. Y. Choi, S.-K. Park*, S. Lee*</p>
-              <p class="citation">2024, 83, 99.</p>
-            </article>
+<div class="journal">International Journal of Hydrogen Energy</div>
+<h3>Synergistic effects of water content and synthesis temperature on tailoring oxalate-derived nickel–iron (Oxy) hydroxide for improving oxygen evolution reaction</h3>
+<p class="authors">Y. Kim, K. Lee, J. Y. Choi, S.-K. Park*, S. Lee*</p>
+<p class="citation">2024, 83, 99.</p>
+</article>
 <article class="pub">
-              <div class="journal">Chemical Communications</div>
-              <h3>Potassium Fluoride-Induced FeOOH Formation in NiFe Oxalate for Improved Oxygen Evolution Performance</h3>
-              <p class="authors">S. Ha, Y. Kim, T. Kim, S. Jeong, G. H. Ryu, S. Lee*</p>
-              <p class="citation">2024, 60, 6781.</p>
-            </article>
+<div class="journal">Chemical Communications</div>
+<h3>Potassium Fluoride-Induced FeOOH Formation in NiFe Oxalate for Improved Oxygen Evolution Performance</h3>
+<p class="authors">S. Ha, Y. Kim, T. Kim, S. Jeong, G. H. Ryu, S. Lee*</p>
+<p class="citation">2024, 60, 6781.</p>
+</article>
 <article class="pub">
-              <div class="journal">RSC Advances</div>
-              <h3>Synthesis and electrochemical evaluation of nickel hydroxide nanosheets with phase transition to nickel oxide</h3>
-              <p class="authors">M. Lee, Y. Jang, G. Yoon, S. Lee*, G. H. Ryu*</p>
-              <p class="citation">2024, 14, 10172.</p>
-            </article>
+<div class="journal">RSC Advances</div>
+<h3>Synthesis and electrochemical evaluation of nickel hydroxide nanosheets with phase transition to nickel oxide</h3>
+<p class="authors">M. Lee, Y. Jang, G. Yoon, S. Lee*, G. H. Ryu*</p>
+<p class="citation">2024, 14, 10172.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Alloys and Compounds</div>
-              <h3>Synthesis of amorphous cobalt hydroxide nanosheets and electrochemical performance according to phase transition into crystalline cobalt oxides</h3>
-              <p class="authors">M. Lee, G. Yoon, M. K. Kim, J. Hong, S. Lee*, G. H. Ryu*</p>
-              <p class="citation">2024, 976, 173282.</p>
-            </article>
+<div class="journal">Journal of Alloys and Compounds</div>
+<h3>Synthesis of amorphous cobalt hydroxide nanosheets and electrochemical performance according to phase transition into crystalline cobalt oxides</h3>
+<p class="authors">M. Lee, G. Yoon, M. K. Kim, J. Hong, S. Lee*, G. H. Ryu*</p>
+<p class="citation">2024, 976, 173282.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Materials Chemistry A</div>
-              <h3>Designing a 3D MXene microsphere encapsulating MOF-derived ZnSe nanoparticles as an anode for highly stable potassium-ion batteries</h3>
-              <p class="authors">J. H. Na, H. G. Oh, S. Lee*, S.-K. Park*</p>
-              <p class="citation">2024, 12, 2848.</p>
-            </article>
+<div class="journal">Journal of Materials Chemistry A</div>
+<h3>Designing a 3D MXene microsphere encapsulating MOF-derived ZnSe nanoparticles as an anode for highly stable potassium-ion batteries</h3>
+<p class="authors">J. H. Na, H. G. Oh, S. Lee*, S.-K. Park*</p>
+<p class="citation">2024, 12, 2848.</p>
+</article>
 <div class="year-divider"><span>2023</span></div>
 <article class="pub">
-              <div class="journal">Nature Communications</div>
-              <h3>Active oxygen species mediate the iron-promoting electrocatalysis of oxygen evolution reaction on metal oxyhydroxides</h3>
-              <p class="authors">Q. Jiang, S. Wang, C. Zhang, Z. Sheng, H. Zhang, R. Feng, Y. Ni, X. Tang, Y. Gu, X. Zhou, S. Lee, D. Zhang, F. Song</p>
-              <p class="citation">2023, 14, 6826.</p>
-            </article>
+<div class="journal">Nature Communications</div>
+<h3>Active oxygen species mediate the iron-promoting electrocatalysis of oxygen evolution reaction on metal oxyhydroxides</h3>
+<p class="authors">Q. Jiang, S. Wang, C. Zhang, Z. Sheng, H. Zhang, R. Feng, Y. Ni, X. Tang, Y. Gu, X. Zhou, S. Lee, D. Zhang, F. Song</p>
+<p class="citation">2023, 14, 6826.</p>
+</article>
 <article class="pub">
-              <div class="journal">Nature Catalysis</div>
-              <h3>Synergistic interactions between PtRu catalyst and nitrogen-doped carbon support boost hydrogen oxidation</h3>
-              <p class="authors">W. Ni, J. L. Meibom, N. Ul Hassan, M. Chang, Y.-C. Chu, A. Krammer, S. Sun, Y. Zheng, L. Bai, W. Ma, S. Lee, S. Jin, J. S. Luterbacher, A. Schüler, H. M. Chen, W. E. Mustain, X. Hu</p>
-              <p class="citation">2023, 6, 773.</p>
-            </article>
+<div class="journal">Nature Catalysis</div>
+<h3>Synergistic interactions between PtRu catalyst and nitrogen-doped carbon support boost hydrogen oxidation</h3>
+<p class="authors">W. Ni, J. L. Meibom, N. Ul Hassan, M. Chang, Y.-C. Chu, A. Krammer, S. Sun, Y. Zheng, L. Bai, W. Ma, S. Lee, S. Jin, J. S. Luterbacher, A. Schüler, H. M. Chen, W. E. Mustain, X. Hu</p>
+<p class="citation">2023, 6, 773.</p>
+</article>
 <article class="pub">
-              <div class="journal">Electrochimica Acta</div>
-              <h3>High Entropy Molybdate-Derived FeOOH Catalyzes Oxygen Evolution Reaction in Alkaline Media</h3>
-              <p class="authors">S. Lee (first and corresponding author), L. Bai, J. Jeong, D. Stenzel, S. Schweidler, B. Breitung</p>
-              <p class="citation">2023, 463, 142775.</p>
-            </article>
+<div class="journal">Electrochimica Acta</div>
+<h3>High Entropy Molybdate-Derived FeOOH Catalyzes Oxygen Evolution Reaction in Alkaline Media</h3>
+<p class="authors">S. Lee (first and corresponding author), L. Bai, J. Jeong, D. Stenzel, S. Schweidler, B. Breitung</p>
+<p class="citation">2023, 463, 142775.</p>
+</article>
 <article class="pub">
-              <div class="journal">Chemical Communications</div>
-              <h3>Facile Route of Fluorine Incorporation into Nickel (Oxy) Hydroxide for Improving Oxygen Evolution Reaction</h3>
-              <p class="authors">Y. Jang, S. Ha, H.-T. Lim, S. Lee</p>
-              <p class="citation">2023, 59, 8928.</p>
-            </article>
+<div class="journal">Chemical Communications</div>
+<h3>Facile Route of Fluorine Incorporation into Nickel (Oxy) Hydroxide for Improving Oxygen Evolution Reaction</h3>
+<p class="authors">Y. Jang, S. Ha, H.-T. Lim, S. Lee</p>
+<p class="citation">2023, 59, 8928.</p>
+</article>
 <article class="pub">
-              <div class="journal">ChemSusChem</div>
-              <h3>Ionomers Modify the Selectivity of Cu-Catalyzed Electrochemical CO2 Reduction</h3>
-              <p class="authors">M. Chang, W. Ren, W. Ni, S. Lee, X. Hu</p>
-              <p class="citation">2023, 16, e202201687.</p>
-            </article>
+<div class="journal">ChemSusChem</div>
+<h3>Ionomers Modify the Selectivity of Cu-Catalyzed Electrochemical CO2 Reduction</h3>
+<p class="authors">M. Chang, W. Ren, W. Ni, S. Lee, X. Hu</p>
+<p class="citation">2023, 16, e202201687.</p>
+</article>
 <article class="pub">
-              <div class="journal">Chem Catalysis</div>
-              <h3>Operando identification of a side-on nickel superoxide intermediate and the mechanism of oxygen evolution on nickel oxyhydroxide</h3>
-              <p class="authors">S. Lee, Y.-C. Chu, L. Bai, H. M. Chen, X. Hu</p>
-              <p class="citation">2023, 3, 100475.</p>
-            </article>
+<div class="journal">Chem Catalysis</div>
+<h3>Operando identification of a side-on nickel superoxide intermediate and the mechanism of oxygen evolution on nickel oxyhydroxide</h3>
+<p class="authors">S. Lee, Y.-C. Chu, L. Bai, H. M. Chen, X. Hu</p>
+<p class="citation">2023, 3, 100475.</p>
+</article>
 <div class="year-divider"><span>2022</span></div>
 <article class="pub">
-              <div class="journal">Nature Communications</div>
-              <h3>Enhancement of electrocatalytic oxygen evolution by chiral molecular functionalization of hybrid 2D electrodes</h3>
-              <p class="authors">Y. Liang, K. Banjac, K. Martin, N. Zigon, S. Lee, N. Vanthuyne, F. A. G.-Pineda, J. R. G.-Mascaros, X. Hu, N. Avarvari, M. Lingenfelder</p>
-              <p class="citation">2022, 13, 1.</p>
-            </article>
+<div class="journal">Nature Communications</div>
+<h3>Enhancement of electrocatalytic oxygen evolution by chiral molecular functionalization of hybrid 2D electrodes</h3>
+<p class="authors">Y. Liang, K. Banjac, K. Martin, N. Zigon, S. Lee, N. Vanthuyne, F. A. G.-Pineda, J. R. G.-Mascaros, X. Hu, N. Avarvari, M. Lingenfelder</p>
+<p class="citation">2022, 13, 1.</p>
+</article>
 <article class="pub">
-              <div class="journal">Nature Materials</div>
-              <h3>An efficient nickel hydrogen oxidation catalyst for hydroxide exchange membrane fuel cells</h3>
-              <p class="authors">W. Ni, T. Wang, F. Heroguel, A. Krammer, S. Lee, L. Yao, A. Schüler, J. S. Luterbacher, Y. Yan, X. Hu</p>
-              <p class="citation">2022, 21, 804.</p>
-            </article>
+<div class="journal">Nature Materials</div>
+<h3>An efficient nickel hydrogen oxidation catalyst for hydroxide exchange membrane fuel cells</h3>
+<p class="authors">W. Ni, T. Wang, F. Heroguel, A. Krammer, S. Lee, L. Yao, A. Schüler, J. S. Luterbacher, Y. Yan, X. Hu</p>
+<p class="citation">2022, 21, 804.</p>
+</article>
 <article class="pub">
-              <div class="journal">Energy &amp; Environmental Science</div>
-              <h3>Tracking high-valent surface iron species in the oxygen evolution reaction cobalt iron (oxy) hydroxides</h3>
-              <p class="authors">S. Lee, A. Moysiadou, Y.-C. Chu, H. M. Chen, X. Hu</p>
-              <p class="citation">2022, 15, 206.</p>
-            </article>
+<div class="journal">Energy &amp; Environmental Science</div>
+<h3>Tracking high-valent surface iron species in the oxygen evolution reaction cobalt iron (oxy) hydroxides</h3>
+<p class="authors">S. Lee, A. Moysiadou, Y.-C. Chu, H. M. Chen, X. Hu</p>
+<p class="citation">2022, 15, 206.</p>
+</article>
 <div class="year-divider"><span>2021</span></div>
 <article class="pub">
-              <div class="journal">Journal of Materials Chemistry A</div>
-              <h3>Mechanochemical synthesis of novel rutile-type high entropy fluorides for electrocatalysis</h3>
-              <p class="authors">P. A. Sukkurji, Y. Cui, S. Lee, K. Wang, R. Azmi, A. Sarkar, S. Indris, S. S. Bhattacharya, R. Kruk, H. Hahn, Q. Wang, M. Botros, B. Breitung</p>
-              <p class="citation">2021, 9, 8998.</p>
-            </article>
+<div class="journal">Journal of Materials Chemistry A</div>
+<h3>Mechanochemical synthesis of novel rutile-type high entropy fluorides for electrocatalysis</h3>
+<p class="authors">P. A. Sukkurji, Y. Cui, S. Lee, K. Wang, R. Azmi, A. Sarkar, S. Indris, S. S. Bhattacharya, R. Kruk, H. Hahn, Q. Wang, M. Botros, B. Breitung</p>
+<p class="citation">2021, 9, 8998.</p>
+</article>
 <article class="pub">
-              <div class="journal">Angewandte Chemie International Edition</div>
-              <h3>Spectroscopic and Electrokinetic Evidence for a Bifunctional Mechanism of the Oxygen Evolution Reaction</h3>
-              <p class="authors">L. Bai, S. Lee (co-first author), X. Hu</p>
-              <p class="citation">2021, 60, 3095.</p>
-            </article>
+<div class="journal">Angewandte Chemie International Edition</div>
+<h3>Spectroscopic and Electrokinetic Evidence for a Bifunctional Mechanism of the Oxygen Evolution Reaction</h3>
+<p class="authors">L. Bai, S. Lee (co-first author), X. Hu</p>
+<p class="citation">2021, 60, 3095.</p>
+</article>
 <div class="year-divider"><span>2020</span></div>
 <article class="pub">
-              <div class="journal">Catalysis Today</div>
-              <h3>Au on highly hydrophobic carbon substrate for improved selective CO production from CO2 in gas-phase electrolytic cell</h3>
-              <p class="authors">G. Park, S. Hong, M. Choi, S. Lee, J. Lee</p>
-              <p class="citation">2020, 355, 340.</p>
-            </article>
+<div class="journal">Catalysis Today</div>
+<h3>Au on highly hydrophobic carbon substrate for improved selective CO production from CO2 in gas-phase electrolytic cell</h3>
+<p class="authors">G. Park, S. Hong, M. Choi, S. Lee, J. Lee</p>
+<p class="citation">2020, 355, 340.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of the American Chemical Society</div>
-              <h3>Mechanism of Oxygen Evolution Catalyzed by Cobalt Oxyhydroxide: Cobalt Superoxide Species as a Key Intermediate and Dioxygen Release as a Rate-Determining Step</h3>
-              <p class="authors">A. Moysiadou, S. Lee (co-first author), C. S. Hsu, H. M. Chen, X. Hu</p>
-              <p class="citation">2020, 142, 11901.</p>
-            </article>
+<div class="journal">Journal of the American Chemical Society</div>
+<h3>Mechanism of Oxygen Evolution Catalyzed by Cobalt Oxyhydroxide: Cobalt Superoxide Species as a Key Intermediate and Dioxygen Release as a Rate-Determining Step</h3>
+<p class="authors">A. Moysiadou, S. Lee (co-first author), C. S. Hsu, H. M. Chen, X. Hu</p>
+<p class="citation">2020, 142, 11901.</p>
+</article>
 <article class="pub">
-              <div class="journal">Angewandte Chemie International Edition</div>
-              <h3>Deciphering Iron-Dependent Activity in Oxygen Evolution Catalyzed by Nickel-Iron Layered Double Hydroxide</h3>
-              <p class="authors">S. Lee, L. Bai, X. Hu</p>
-              <p class="citation">2020, 59, 8072.</p>
-            </article>
+<div class="journal">Angewandte Chemie International Edition</div>
+<h3>Deciphering Iron-Dependent Activity in Oxygen Evolution Catalyzed by Nickel-Iron Layered Double Hydroxide</h3>
+<p class="authors">S. Lee, L. Bai, X. Hu</p>
+<p class="citation">2020, 59, 8072.</p>
+</article>
 <article class="pub">
-              <div class="journal">The Chemical Record</div>
-              <h3>Looking Back and Looking Ahead in Electrochemical Reduction of CO2</h3>
-              <p class="authors">S. Lee, M. Choi, J. Lee</p>
-              <p class="citation">2020, 20, 89.</p>
-            </article>
+<div class="journal">The Chemical Record</div>
+<h3>Looking Back and Looking Ahead in Electrochemical Reduction of CO2</h3>
+<p class="authors">S. Lee, M. Choi, J. Lee</p>
+<p class="citation">2020, 20, 89.</p>
+</article>
 <div class="year-divider"><span>2019</span></div>
 <article class="pub">
-              <div class="journal">Angewandte Chemie International Edition</div>
-              <h3>Oxygen Isotope Labeling Experiments Reveal Different Reaction Sites for the Oxygen Evolution Reaction on Nickel and Nickel Iron Oxides</h3>
-              <p class="authors">S. Lee, K. Banjac, M. Lingenfelder, X. Hu</p>
-              <p class="citation">2019, 58, 10295.</p>
-            </article>
+<div class="journal">Angewandte Chemie International Edition</div>
+<h3>Oxygen Isotope Labeling Experiments Reveal Different Reaction Sites for the Oxygen Evolution Reaction on Nickel and Nickel Iron Oxides</h3>
+<p class="authors">S. Lee, K. Banjac, M. Lingenfelder, X. Hu</p>
+<p class="citation">2019, 58, 10295.</p>
+</article>
 <div class="year-divider"><span>2018</span></div>
 <article class="pub">
-              <div class="journal">Journal of the American Chemical Society</div>
-              <h3>Transition Metal Oxides as Electrocatalysts for the Oxygen Evolution Reaction in Alkaline Solutions: an Application-Inspired Renaissance</h3>
-              <p class="authors">F. Song, L. Bai, A. Moysiadou, S. Lee, C. Hu, L. Liardet, X. Hu</p>
-              <p class="citation">2018, 140, 7748.</p>
-            </article>
+<div class="journal">Journal of the American Chemical Society</div>
+<h3>Transition Metal Oxides as Electrocatalysts for the Oxygen Evolution Reaction in Alkaline Solutions: an Application-Inspired Renaissance</h3>
+<p class="authors">F. Song, L. Bai, A. Moysiadou, S. Lee, C. Hu, L. Liardet, X. Hu</p>
+<p class="citation">2018, 140, 7748.</p>
+</article>
 <article class="pub">
-              <div class="journal">ChemElectroChem</div>
-              <h3>Ethylene Selectivity in CO Electroreduction when using Cu Oxides: An In Situ ATR-SEIRAS Study</h3>
-              <p class="authors">S. Lee, J. Lee</p>
-              <p class="citation">2018, 5, 558.</p>
-            </article>
+<div class="journal">ChemElectroChem</div>
+<h3>Ethylene Selectivity in CO Electroreduction when using Cu Oxides: An In Situ ATR-SEIRAS Study</h3>
+<p class="authors">S. Lee, J. Lee</p>
+<p class="citation">2018, 5, 558.</p>
+</article>
 <div class="year-divider"><span>2017</span></div>
 <article class="pub">
-              <div class="journal">ACS Catalysis</div>
-              <h3>Importance of Ag-Cu Biphasic Boundaries for Selective Electrochemical Reduction of CO2 to Ethanol</h3>
-              <p class="authors">S. Lee, G. Park, J. Lee</p>
-              <p class="citation">2017, 7, 8594.</p>
-            </article>
+<div class="journal">ACS Catalysis</div>
+<h3>Importance of Ag-Cu Biphasic Boundaries for Selective Electrochemical Reduction of CO2 to Ethanol</h3>
+<p class="authors">S. Lee, G. Park, J. Lee</p>
+<p class="citation">2017, 7, 8594.</p>
+</article>
 <article class="pub">
-              <div class="journal">Catalysis Today</div>
-              <h3>Anion dependent CO/H2 production ratio from CO2 reduction on Au electro-catalyst</h3>
-              <p class="authors">S. Hong, S. Lee, S. Kim, J. K. Lee, J. Lee</p>
-              <p class="citation">2017, 295, 82.</p>
-            </article>
+<div class="journal">Catalysis Today</div>
+<h3>Anion dependent CO/H2 production ratio from CO2 reduction on Au electro-catalyst</h3>
+<p class="authors">S. Hong, S. Lee, S. Kim, J. K. Lee, J. Lee</p>
+<p class="citation">2017, 295, 82.</p>
+</article>
 <article class="pub">
-              <div class="journal">Catalysis Today</div>
-              <h3>Bulk pH contribution to CO/HCOO− production from CO2 on oxygen-evacuated Cu2O electrocatalyst</h3>
-              <p class="authors">S. Lee, S. Hong, J. Lee</p>
-              <p class="citation">2017, 288, 11.</p>
-            </article>
+<div class="journal">Catalysis Today</div>
+<h3>Bulk pH contribution to CO/HCOO− production from CO2 on oxygen-evacuated Cu2O electrocatalyst</h3>
+<p class="authors">S. Lee, S. Hong, J. Lee</p>
+<p class="citation">2017, 288, 11.</p>
+</article>
 <div class="year-divider"><span>2016</span></div>
 <article class="pub">
-              <div class="journal">ChemSusChem</div>
-              <h3>Electrode Build-Up of Reducible Metal Composites toward Achievable Electrochemical Conversion of Carbon Dioxide</h3>
-              <p class="authors">S. Lee, J. Lee</p>
-              <p class="citation">2016, 9, 333.</p>
-            </article>
+<div class="journal">ChemSusChem</div>
+<h3>Electrode Build-Up of Reducible Metal Composites toward Achievable Electrochemical Conversion of Carbon Dioxide</h3>
+<p class="authors">S. Lee, J. Lee</p>
+<p class="citation">2016, 9, 333.</p>
+</article>
 <div class="year-divider"><span>2015</span></div>
 <article class="pub">
-              <div class="journal">Angewandte Chemie International Edition</div>
-              <h3>Electrocatalytic Production of C3-C4 Compounds by Conversion of CO2 on a Chloride-Induced Bi-Phasic Cu2O-Cu Catalyst</h3>
-              <p class="authors">S. Lee, D. Kim, J. Lee</p>
-              <p class="citation">2015, 54, 14701.</p>
-            </article>
+<div class="journal">Angewandte Chemie International Edition</div>
+<h3>Electrocatalytic Production of C3-C4 Compounds by Conversion of CO2 on a Chloride-Induced Bi-Phasic Cu2O-Cu Catalyst</h3>
+<p class="authors">S. Lee, D. Kim, J. Lee</p>
+<p class="citation">2015, 54, 14701.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Power Sources</div>
-              <h3>Direct power generation from waste coffee grounds in a biomass fuel cell</h3>
-              <p class="authors">H. Jang, J. D. Ocon, S. Lee, J. K. Lee, J. Lee</p>
-              <p class="citation">2015, 296, 433.</p>
-            </article>
+<div class="journal">Journal of Power Sources</div>
+<h3>Direct power generation from waste coffee grounds in a biomass fuel cell</h3>
+<p class="authors">H. Jang, J. D. Ocon, S. Lee, J. K. Lee, J. Lee</p>
+<p class="citation">2015, 296, 433.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Physical Chemistry C</div>
-              <h3>Alkaline CO2 Electrolysis toward Selective and Continuous HCOO− Production over SnO2 Nanocatalysts</h3>
-              <p class="authors">S. Lee, J. D. Ocon, Y. Son, J. Lee</p>
-              <p class="citation">2015, 119, 4884.</p>
-            </article>
+<div class="journal">Journal of Physical Chemistry C</div>
+<h3>Alkaline CO2 Electrolysis toward Selective and Continuous HCOO− Production over SnO2 Nanocatalysts</h3>
+<p class="authors">S. Lee, J. D. Ocon, Y. Son, J. Lee</p>
+<p class="citation">2015, 119, 4884.</p>
+</article>
 <article class="pub">
-              <div class="journal">Journal of Materials Chemistry A</div>
-              <h3>Sustainable production of formic acid by electrolytic reduction of gaseous carbon dioxide</h3>
-              <p class="authors">S. Lee, H. Ju, R. L. Machunda, S. Uhm, J. K. Lee, H. J. Lee, J. Lee</p>
-              <p class="citation">2015, 3, 3029.</p>
-            </article>
+<div class="journal">Journal of Materials Chemistry A</div>
+<h3>Sustainable production of formic acid by electrolytic reduction of gaseous carbon dioxide</h3>
+<p class="authors">S. Lee, H. Ju, R. L. Machunda, S. Uhm, J. K. Lee, H. J. Lee, J. Lee</p>
+<p class="citation">2015, 3, 3029.</p>
+</article>
 <article class="pub">
-              <div class="journal">Physical Chemistry Chemical Physics</div>
-              <h3>Insights into autonomously formed oxygen-evacuated Cu2O electrode for the selective production of C2H4 from CO2</h3>
-              <p class="authors">D. Kim, S. Lee (co-first author), J. D. Ocon, B. Jeong, J. K. Lee, J. Lee</p>
-              <p class="citation">2015, 17, 824.</p>
-            </article>
-    </div>
-
-    <div class="section-label">Peer-reviewed Conference Proceeding</div>
-    <div class="pub-list">
-      <div class="year-divider"><span>2013</span></div>
+<div class="journal">Physical Chemistry Chemical Physics</div>
+<h3>Insights into autonomously formed oxygen-evacuated Cu2O electrode for the selective production of C2H4 from CO2</h3>
+<p class="authors">D. Kim, S. Lee (co-first author), J. D. Ocon, B. Jeong, J. K. Lee, J. Lee</p>
+<p class="citation">2015, 17, 824.</p>
+</article>
+</div>
+<div class="section-label">Peer-reviewed Conference Proceeding</div><div class="pub-list">
+<div class="year-divider"><span>2013</span></div>
 <article class="pub">
-              <div class="journal">ECS Transactions</div>
-              <h3>Electrocatalytic reduction of gas-phased CO2 on nano-sized Sn electrode surface</h3>
-              <p class="authors">S. Lee, H. Ju, H. Jeon, R. L. Machunda, D. Kim, J. K. Lee, J. Lee</p>
-              <p class="citation">2013, 53, 41.</p>
-            </article>
-    </div>
-
-    <div class="section-label">Patents</div>
-    <div class="pub-list">
-      <div class="year-divider"><span>2016</span></div>
+<div class="journal">ECS Transactions</div>
+<h3>Electrocatalytic reduction of gas-phased CO2 on nano-sized Sn electrode surface</h3>
+<p class="authors">S. Lee, H. Ju, H. Jeon, R. L. Machunda, D. Kim, J. K. Lee, J. Lee</p>
+<p class="citation">2013, 53, 41.</p>
+</article>
+</div><div class="section-label">Patents</div><div class="pub-list">
+<div class="year-divider"><span>2016</span></div>
 <article class="pub">
-              <div class="journal">Korea Patent</div>
-              <h3>A process of reducing carbon dioxide by using a cathode comprising metal oxide</h3>
-              <p class="authors">S. Lee et al.</p>
-              <p class="citation">Application No. 10-2014-0104451 (2014.08.12); Patent No. 1647338 (2016.08.04).</p>
-            </article>
+<div class="journal">Korea Patent</div>
+<h3>A process of reducing carbon dioxide by using a cathode comprising metal oxide</h3>
+<p class="authors">S. Lee et al.</p>
+<p class="citation">Application No. 10-2014-0104451 (2014.08.12); Patent No. 1647338 (2016.08.04).</p>
+</article>
 <div class="year-divider"><span>2025</span></div>
 <article class="pub">
-              <div class="journal">Korea Patent</div>
-              <h3>수전해용 촉매 전극의 제조방법</h3>
-              <p class="authors">S. Lee et al.</p>
-              <p class="citation">Application No. 10-2023-0056547 (2023.04.28); Patent No. 10-2816312 (2025.05.29).</p>
-            </article>
-    </div>
-  </div>
+<div class="journal">Korea Patent</div>
+<h3>수전해용 촉매 전극의 제조방법</h3>
+<p class="authors">S. Lee et al.</p>
+<p class="citation">Application No. 10-2023-0056547 (2023.04.28); Patent No. 10-2816312 (2025.05.29).</p>
+</article>
+</div>
+</section>
+</div>
 </main>
-
-<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>SEE Lab</h4><p>Sustainable Electrochemical Engineering Lab<br>Sookmyung Women’s University, Seoul, Korea</p></div><div><h4>Navigate</h4><p><a href="research.html">Research</a><br><a href="professor.html">Professor</a><br><a href="people.html">People</a><br><a href="publications.html">Publications</a></p></div><div><h4>Connect</h4><p><a href="news.html">News</a><br><a href="lab-life.html">Lab Life</a><br><a href="contact.html">Contact</a></p></div></div><div class="copyright">© 2026 Sustainable Electrochemical Engineering Lab (SEE Lab). All rights reserved.</div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h4>SEE Lab</h4><p>Sustainable Electrochemical Engineering Lab<br/>Sookmyung Women’s University, Seoul, Korea</p></div><div><h4>Navigate</h4><p><a href="research.html">Research</a><br/><a href="professor.html">Professor</a><br/><a href="people.html">People</a><br/><a href="publications.html">Publications</a></p></div><div><h4>Connect</h4><p><a href="news.html">News</a><br/><a href="lab-life.html">Lab Life</a><br/><a href="contact.html">Contact</a></p></div></div><div class="copyright">© 2026 Sustainable Electrochemical Engineering Lab (SEE Lab). All rights reserved.</div></div></footer>
 <script src="app.js"></script>
-</body>
+<script>
+  const publicationTabs = document.querySelectorAll('.publication-tab');
+  const publicationPanels = document.querySelectorAll('.publication-panel');
+
+  publicationTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      publicationTabs.forEach(item => {
+        item.classList.remove('active');
+        item.setAttribute('aria-selected', 'false');
+      });
+      publicationPanels.forEach(panel => panel.classList.remove('active'));
+
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script></body>
 </html>
