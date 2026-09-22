@@ -57,13 +57,16 @@
     }
 
     .member-visual{
-      height:230px;
-      display:grid;
-      place-items:center;
+      height:195px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
       background:
-        radial-gradient(circle at 78% 20%,rgba(88,233,246,.20),transparent 22%),
-        linear-gradient(145deg,#f4faff,#e6f2fa);
+        radial-gradient(circle at 78% 20%,rgba(88,233,246,.16),transparent 22%),
+        linear-gradient(145deg,#f7fbfe,#edf5fb);
       border-bottom:1px solid #dbe7f1;
+      overflow:hidden;
     }
 
     .member-visual svg{
@@ -73,7 +76,8 @@
     }
 
     .member-info{
-      padding:28px;
+      padding:20px 24px 24px;
+      background:#fff;
     }
 
     .member-role{
@@ -86,7 +90,15 @@
     }
 
     .member-info h3{
-      margin-top:10px;
+      margin:7px 0 8px;
+      line-height:1.2;
+    }
+
+    .member-affiliation{
+      margin:0;
+      color:#5a738a;
+      font-size:14px;
+      line-height:1.62;
     }
 
     /* Alumni: two people per row */
@@ -119,12 +131,12 @@
     }
 
     .alumni-photo{
-      height:175px;
-      display:grid;
-      place-items:center;
-      background:
-        radial-gradient(circle at 75% 20%,rgba(80,215,234,.16),transparent 22%),
-        linear-gradient(145deg,#f4faff,#e8f2f9);
+      height:170px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px;
+      background:#f8fbfe;
       border:1px solid #dbe7f1;
       border-radius:16px;
       overflow:hidden;
@@ -133,14 +145,16 @@
     .alumni-photo img{
       width:100%;
       height:100%;
-      object-fit:cover;
-      object-position:center 20%;
+      object-fit:contain;
+      object-position:center;
       display:block;
+      border-radius:10px;
     }
 
     .alumni-photo.caricature img{
       object-fit:contain;
-      padding:8px;
+      object-position:center;
+      padding:4px;
       background:#f8fbfe;
     }
 
@@ -195,16 +209,19 @@
     @media(max-width:640px){
       .people-tabs{gap:8px;}
       .people-tab{flex:1;padding:10px 15px;}
-      .member-visual{height:210px;}
-      .alumni-photo{height:150px;}
+      .member-visual{height:185px;}
+      .alumni-photo{height:155px;}
     }
   
     .member-visual img{
       width:100%;
       height:100%;
-      object-fit:cover;
-      object-position:center 20%;
+      max-width:180px;
+      max-height:175px;
+      object-fit:contain;
+      object-position:center;
       display:block;
+      border-radius:10px;
     }
 
   </style>
@@ -277,9 +294,9 @@
           <div class="member-info">
             <div class="member-role">Current · Researcher</div>
             <h3>Youngji Kim</h3>
-            <p>
+            <p class="member-affiliation">
               Researcher<br>
-              SEE Lab
+              Sustainable Electrochemical Engineering Lab
             </p>
           </div>
         </article>
@@ -291,7 +308,7 @@
           <div class="member-info">
             <div class="member-role">Current · M.S. Student</div>
             <h3>Jihwan Park</h3>
-            <p>
+            <p class="member-affiliation">
               M.S. Student<br>
               Changwon National University
             </p>
@@ -309,7 +326,7 @@
           <div class="member-info">
             <div class="member-role">Open Position</div>
             <h3>Join SEE Lab</h3>
-            <p>
+            <p class="member-affiliation">
               Students interested in sustainable electrochemical engineering
               are welcome to contact the laboratory.
             </p>
