@@ -7,13 +7,71 @@
   <meta name="description" content="SEE Lab — Sustainable Electrochemical Engineering Lab at Sookmyung Women's University.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* SEE Lab symbol in the upper-left brand area */
+    .brand-wrap{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand-symbol-link{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+    }
+
+    .brand-symbol{
+      display:block;
+      width:52px;
+      height:52px;
+      object-fit:contain;
+    }
+
+    .brand-text-wrap{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    @media(max-width:900px){
+      .brand-symbol{
+        width:46px;
+        height:46px;
+      }
+    }
+
+    @media(max-width:640px){
+      .brand-symbol{
+        width:42px;
+        height:42px;
+      }
+
+      .brand-text-wrap{
+        gap:8px;
+      }
+
+      .brand-sub{
+        display:none;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
       <div class="brand-wrap">
-        <a class="brand" href="index.html">SEE LAB</a>
-        <div class="brand-sub">Sustainable Electrochemical<br>Engineering Lab</div>
+        <a class="brand-symbol-link" href="index.html" aria-label="SEE Lab Home">
+          <img class="brand-symbol" src="assets/see-lab-symbol.png" alt="SEE Lab symbol">
+        </a>
+
+        <div class="brand-text-wrap">
+          <a class="brand" href="index.html">SEE LAB</a>
+          <div class="brand-sub">Sustainable Electrochemical<br>Engineering Lab</div>
+        </div>
       </div>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
       <nav class="nav-links"><a class="active" href="index.html">Home</a><a href="research.html">Research</a><a href="professor.html">Professor</a><a href="people.html">People</a><a href="publications.html">Publications</a><a href="news.html">News</a><a href="lab-life.html">Lab Life</a><a href="contact.html">Contact</a></nav>
@@ -29,7 +87,7 @@
           <p class="hero-lab">Sustainable Electrochemical Engineering Lab</p>
           <p class="hero-uni">Sookmyung Women’s University</p>
           <div class="hero-divider"></div>
-          <p class="hero-summary">We study dynamic electrochemical interfaces to develop highly active and durable catalysts for green hydrogen and sustainable energy conversion.</p>
+          <p class="hero-summary">We study dynamic electrochemical interfaces and develop durable catalysts for green hydrogen and sustainable energy conversion.</p>
           <div class="cta-row">
             <a class="btn primary" href="research.html">Explore Research →</a>
             <a class="btn ghost" href="contact.html">Join Us →</a>
@@ -37,10 +95,10 @@
         </div>
       </div>
       <div class="hero-metrics container">
-        <div class="metric"><strong>Green Energy Solutions</strong><span>Electrochemical routes for sustainable hydrogen and clean energy systems.</span></div>
-        <div class="metric"><strong>Electrochemical Systems</strong><span>Development of catalysts, electrodes and reactors.</span></div>
-        <div class="metric"><strong>Operando Investigations</strong><span>Tracking catalyst surfaces and interfaces in real time under working reaction conditions.</span></div>
-        <div class="metric"><strong>A Sustainable Tomorrow: SEE Lab.</strong><span>Connecting fundamental insight to practical electrochemical technologies.</span></div>
+        <div class="metric"><small>Green Energy Solutions</small><strong>H₂</strong><span>Electrochemical routes for sustainable hydrogen and clean energy systems.</span></div>
+        <div class="metric"><small>Durable Catalysts</small><strong>Reconstruction</strong><span>Understanding stability, dissolution, and active-phase evolution in operation.</span></div>
+        <div class="metric"><small>Operando Signals</small><strong>Raman · XAS</strong><span>Tracking catalyst surfaces in real time under working reaction conditions.</span></div>
+        <div class="metric"><small>A Sustainable Tomorrow</small><strong>SEE Lab</strong><span>Connecting fundamental insight to practical electrochemical technologies.</span></div>
       </div>
     </section>
 
