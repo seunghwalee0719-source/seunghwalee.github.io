@@ -279,6 +279,91 @@
         align-items:flex-start;
       }
     }
+  
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+      margin-top:26px;
+    }
+
+    .news-card{
+      overflow:hidden;
+      border:1px solid #dbe7f0;
+      border-radius:22px;
+      background:#fff;
+      box-shadow:0 14px 34px rgba(17,60,91,.06);
+    }
+
+    .news-image{
+      height:220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      background:linear-gradient(145deg,#f1f8fc,#eaf4fa);
+      border-bottom:1px solid #dbe7f0;
+    }
+
+    .news-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .news-placeholder{
+      width:96px;
+      height:96px;
+      border-radius:24px;
+      display:grid;
+      place-items:center;
+      background:#fff;
+      border:1px solid #cfe1ec;
+      color:#0d72cf;
+      font-size:38px;
+      box-shadow:0 8px 24px rgba(17,60,91,.06);
+    }
+
+    .news-body{
+      padding:20px 22px 22px;
+    }
+
+    .news-date{
+      display:block;
+      margin-bottom:8px;
+      color:#0d72cf;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .news-card h3{
+      margin:0 0 10px;
+      color:#163b5b;
+      font-size:24px;
+      line-height:1.22;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+
+    .news-card p{
+      margin:0;
+      color:#6a8296;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    @media(max-width:820px){
+      .news-grid{
+        grid-template-columns:1fr;
+      }
+
+      .news-image{
+        height:200px;
+      }
+    }
+
   </style>
 
 </head>
@@ -329,57 +414,74 @@
 
 <main class="content">
   <div class="container content-wrap">
+
     <section class="section-card">
-      <div class="eyebrow">Featured</div>
-      <h2>A clean and friendly space for announcements.</h2>
+      <div class="eyebrow">Latest News</div>
+      <h2>News &amp; updates from SEE Lab.</h2>
       <p class="lede">
-        This page is designed so you can later add real news items without changing the overall structure.
-        It works well for short news posts, notable achievements, and time-ordered updates.
+        Research highlights, publications, conferences, awards, and group milestones
+        will be added here in reverse chronological order.
       </p>
 
-      <div class="grid-3x">
-        <article class="info-card">
-          <small>Publication News</small>
-          <h3>New paper highlights</h3>
-          <p>Use this block for recently accepted papers, journal covers, or important research outcomes from the lab.</p>
-        </article>
-        <article class="info-card">
-          <small>Conference News</small>
-          <h3>Presentations & meetings</h3>
-          <p>Summarize oral presentations, poster sessions, invited talks, or workshop participation with 2–3 lines.</p>
-        </article>
-        <article class="info-card">
-          <small>Lab Milestones</small>
-          <h3>Awards and achievements</h3>
-          <p>Highlight student awards, graduation milestones, new members, and notable institutional announcements.</p>
-        </article>
-      </div>
+      <div class="news-grid">
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="date">Latest</div>
-          <div>
-            <h4>Example headline area</h4>
-            <p>Add a short summary here for the most recent announcement. A single sentence or two is enough for clean readability.</p>
+        <article class="news-card">
+          <div class="news-image">
+            <img src="assets/news-hero-campus.png" alt="Sookmyung Women's University campus illustration">
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="date">Archive</div>
-          <div>
-            <h4>Another news entry</h4>
-            <p>This secondary row works well for past events, media mentions, department notices, or activity recaps.</p>
+          <div class="news-body">
+            <span class="news-date">09 / 2026</span>
+            <h3>SEE Lab opens at Sookmyung Women’s University</h3>
+            <p>
+              Sustainable Electrochemical Engineering Lab (SEE Lab) begins its new chapter
+              at Sookmyung Women’s University in September 2026.
+            </p>
           </div>
-        </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-image">
+            <div class="news-placeholder">＋</div>
+          </div>
+          <div class="news-body">
+            <span class="news-date">Coming Soon</span>
+            <h3>Next SEE Lab update</h3>
+            <p>
+              Future news items can include publications, conference presentations,
+              awards, new members, and laboratory milestones.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-image">
+            <div class="news-placeholder">＋</div>
+          </div>
+          <div class="news-body">
+            <span class="news-date">Archive</span>
+            <h3>News item</h3>
+            <p>
+              Add a representative image, date, headline, and a short two- or three-line summary here.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-image">
+            <div class="news-placeholder">＋</div>
+          </div>
+          <div class="news-body">
+            <span class="news-date">Archive</span>
+            <h3>News item</h3>
+            <p>
+              This two-column layout keeps the page compact while leaving enough room for images and concise descriptions.
+            </p>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <div class="cta-band">
-      <div>
-        <h3>Flexible for future updates</h3>
-        <p>You can keep this page simple now and later replace the placeholders with actual news posts one by one.</p>
-      </div>
-      <a class="btn-lite" href="contact.html">Contact SEE Lab</a>
-    </div>
   </div>
 </main>
 
