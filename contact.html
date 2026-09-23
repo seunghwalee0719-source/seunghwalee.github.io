@@ -302,6 +302,90 @@
       display:block;
     }
 
+  
+    /* Final contact hero layout */
+    .sub-hero-grid{
+      grid-template-columns:minmax(0,1fr) 330px !important;
+      gap:22px !important;
+      align-items:center;
+    }
+
+    .sub-hero-copy{
+      max-width:675px;
+    }
+
+    /* Pull the image block left so it sits closer to the text */
+    .contact-visual-stack{
+      width:330px;
+      justify-self:start;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:14px;
+    }
+
+    .contact-visual-stack .sub-hero-visual{
+      width:330px !important;
+      max-width:330px !important;
+      padding:14px !important;
+      margin:0 !important;
+      justify-self:auto !important;
+      background:#f7fbfe;
+    }
+
+    .contact-visual-stack .sub-hero-visual img{
+      width:auto !important;
+      max-width:100% !important;
+      height:auto !important;
+      max-height:280px !important;
+      object-fit:contain !important;
+      display:block;
+      margin:0 auto;
+    }
+
+    /* SEE Lab logo placed directly below, aligned to the lower-right */
+    .contact-see-logo{
+      width:170px;
+      margin-right:6px;
+    }
+
+    .contact-see-logo img{
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+    }
+
+    @media(max-width:980px){
+      .sub-hero-grid{
+        grid-template-columns:1fr !important;
+      }
+
+      .contact-visual-stack{
+        width:min(100%,330px);
+        justify-self:start;
+        align-items:flex-start;
+      }
+
+      .contact-visual-stack .sub-hero-visual{
+        width:100% !important;
+      }
+
+      .contact-see-logo{
+        margin-right:0;
+      }
+    }
+
+    @media(max-width:640px){
+      .contact-visual-stack{
+        width:min(100%,300px);
+      }
+
+      .contact-see-logo{
+        width:145px;
+      }
+    }
+
   </style>
 
 </head>
@@ -342,8 +426,14 @@
         <span>Email</span>
       </div>
     </div>
-    <div class="sub-hero-visual">
-      <img src="assets/contact-we-want-you.png" alt="Illustrated campus and location concept image for the SEE Lab contact page.">
+    <div class="contact-visual-stack">
+      <div class="sub-hero-visual">
+        <img src="assets/contact-we-want-you.png" alt="We want you">
+      </div>
+
+      <div class="contact-see-logo">
+        <img src="assets/see-lab-full-logo.png" alt="SEE Lab — Sustainable Electrochemical Engineering Lab">
+      </div>
     </div>
   </div>
 </section>
