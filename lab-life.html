@@ -279,6 +279,172 @@
         align-items:flex-start;
       }
     }
+
+    /* Lab Life chronological gallery */
+    .life-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:0 0 28px;
+    }
+    .life-nav a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 15px;
+      border-radius:999px;
+      border:1px solid #d7e6f0;
+      background:#f8fcff;
+      color:#245475;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.03em;
+      transition:.2s ease;
+    }
+    .life-nav a:hover{
+      transform:translateY(-1px);
+      border-color:#8cc9e7;
+      background:#eef8fd;
+    }
+    .life-era{
+      scroll-margin-top:110px;
+      padding:8px 0 30px;
+    }
+    .life-era + .life-era{
+      border-top:1px solid #e2edf4;
+      padding-top:34px;
+    }
+    .life-era-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:20px;
+      margin-bottom:18px;
+    }
+    .life-era-head h3{
+      margin:0;
+      color:#14395a;
+      font-size:27px;
+      line-height:1.15;
+      font-family:Georgia,"Times New Roman",serif;
+    }
+    .life-era-head p{
+      margin:5px 0 0;
+      color:#738a9d;
+      font-size:13px;
+      line-height:1.6;
+    }
+    .life-gallery{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+    .gallery-item{
+      margin:0;
+    }
+    .gallery-button{
+      display:block;
+      width:100%;
+      padding:0;
+      border:0;
+      border-radius:18px;
+      overflow:hidden;
+      background:#edf5fa;
+      cursor:zoom-in;
+      box-shadow:0 9px 24px rgba(17,60,91,.06);
+    }
+    .gallery-button img{
+      display:block;
+      width:100%;
+      aspect-ratio:3/2;
+      object-fit:cover;
+      transition:transform .25s ease, filter .25s ease;
+    }
+    .gallery-button:hover img{
+      transform:scale(1.025);
+      filter:brightness(.97);
+    }
+    .gallery-item figcaption{
+      margin-top:9px;
+      color:#6a8296;
+      font-size:12.5px;
+      line-height:1.5;
+    }
+
+    /* Full-screen image viewer */
+    .gallery-modal{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      background:rgba(5,18,31,.88);
+      backdrop-filter:blur(5px);
+    }
+    .gallery-modal.open{
+      display:flex;
+    }
+    .gallery-modal-inner{
+      position:relative;
+      width:min(1180px,94vw);
+      max-height:92vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+    }
+    .gallery-modal img{
+      display:block;
+      max-width:100%;
+      max-height:82vh;
+      object-fit:contain;
+      border-radius:12px;
+      box-shadow:0 24px 80px rgba(0,0,0,.35);
+      background:#fff;
+    }
+    .gallery-modal-caption{
+      color:#eef7fc;
+      font-size:13px;
+      text-align:center;
+    }
+    .gallery-modal-close{
+      position:absolute;
+      top:-14px;
+      right:-14px;
+      width:42px;
+      height:42px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:50%;
+      background:rgba(11,35,54,.84);
+      color:#fff;
+      font-size:25px;
+      line-height:1;
+      cursor:pointer;
+    }
+
+    @media(max-width:900px){
+      .life-gallery{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+    @media(max-width:620px){
+      .life-gallery{
+        grid-template-columns:1fr;
+      }
+      .life-era-head{
+        display:block;
+      }
+      .gallery-modal{
+        padding:16px;
+      }
+      .gallery-modal-close{
+        top:-10px;
+        right:-6px;
+      }
+    }
+
   </style>
 
 </head>
@@ -309,12 +475,16 @@
   <div class="container sub-hero-grid">
     <div class="sub-hero-copy">
       <div class="eyebrow">Lab Life</div>
-      <h1>Everyday moments in the lab.</h1>
+      <h1>Moments from the lab, across the years.</h1>
       <p>
-        The Lab Life page should feel more personal than the Research page—showing collaboration,
-        experimental work, group activities, and the culture that supports SEE Lab.
+        A visual archive of research life, group activities, conferences, and everyday moments
+        from earlier years, Changwon National University, and Sookmyung Women’s University.
       </p>
-      
+      <div class="sub-hero-badges">
+        <span>2021 &amp; Earlier</span>
+        <span>2022–2026 · CWNU</span>
+        <span>2026–Present · SMWU</span>
+      </div>
     </div>
     <div class="sub-hero-visual">
       <img src="assets/lablife-hero-collaboration.png" alt="Illustrated collaborative blue-toned laboratory scene for the SEE Lab lab-life page.">
@@ -322,7 +492,138 @@
   </div>
 </section>
 
+<main class="content">
+  <div class="container content-wrap">
+    <section class="section-card">
+      <div class="eyebrow">Lab Life Archive</div>
+      <h2>Snapshots through the years.</h2>
+      <p class="lede">
+        Photos are grouped chronologically. On desktop, three images are shown per row.
+        Click any image to view it at a larger size.
+      </p>
 
+      <nav class="life-nav" aria-label="Lab Life periods">
+        <a href="#earlier">2021 &amp; Earlier</a>
+        <a href="#cwnu">2022–2026 · CWNU</a>
+        <a href="#smwu">2026–Present · SMWU</a>
+      </nav>
+
+      <section class="life-era" id="earlier">
+        <div class="life-era-head">
+          <div>
+            <h3>2021 &amp; Earlier</h3>
+            <p>Earlier research years, collaborations, conferences, and group memories.</p>
+          </div>
+        </div>
+        <div class="life-gallery">
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-2021-01.jpg"
+                    data-caption="Earlier years · Photo 01">
+              <img src="assets/lablife-2021-01.jpg" alt="Earlier years · Photo 01" loading="lazy">
+            </button>
+            <figcaption>Earlier years · Photo 01</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-2021-02.jpg"
+                    data-caption="Earlier years · Photo 02">
+              <img src="assets/lablife-2021-02.jpg" alt="Earlier years · Photo 02" loading="lazy">
+            </button>
+            <figcaption>Earlier years · Photo 02</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-2021-03.jpg"
+                    data-caption="Earlier years · Photo 03">
+              <img src="assets/lablife-2021-03.jpg" alt="Earlier years · Photo 03" loading="lazy">
+            </button>
+            <figcaption>Earlier years · Photo 03</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="life-era" id="cwnu">
+        <div class="life-era-head">
+          <div>
+            <h3>2022–2026 · CWNU</h3>
+            <p>Lab life and research activities at Changwon National University.</p>
+          </div>
+        </div>
+        <div class="life-gallery">
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-cwnu-01.jpg"
+                    data-caption="CWNU · Photo 01">
+              <img src="assets/lablife-cwnu-01.jpg" alt="CWNU · Photo 01" loading="lazy">
+            </button>
+            <figcaption>CWNU · Photo 01</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-cwnu-02.jpg"
+                    data-caption="CWNU · Photo 02">
+              <img src="assets/lablife-cwnu-02.jpg" alt="CWNU · Photo 02" loading="lazy">
+            </button>
+            <figcaption>CWNU · Photo 02</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-cwnu-03.jpg"
+                    data-caption="CWNU · Photo 03">
+              <img src="assets/lablife-cwnu-03.jpg" alt="CWNU · Photo 03" loading="lazy">
+            </button>
+            <figcaption>CWNU · Photo 03</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="life-era" id="smwu">
+        <div class="life-era-head">
+          <div>
+            <h3>2026–Present · SMWU</h3>
+            <p>The new chapter of SEE Lab at Sookmyung Women’s University.</p>
+          </div>
+        </div>
+        <div class="life-gallery">
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-smwu-01.jpg"
+                    data-caption="SMWU · Photo 01">
+              <img src="assets/lablife-smwu-01.jpg" alt="SMWU · Photo 01" loading="lazy">
+            </button>
+            <figcaption>SMWU · Photo 01</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-smwu-02.jpg"
+                    data-caption="SMWU · Photo 02">
+              <img src="assets/lablife-smwu-02.jpg" alt="SMWU · Photo 02" loading="lazy">
+            </button>
+            <figcaption>SMWU · Photo 02</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <button class="gallery-button" type="button"
+                    data-full="assets/lablife-smwu-03.jpg"
+                    data-caption="SMWU · Photo 03">
+              <img src="assets/lablife-smwu-03.jpg" alt="SMWU · Photo 03" loading="lazy">
+            </button>
+            <figcaption>SMWU · Photo 03</figcaption>
+          </figure>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
 
 <footer class="footer">
   <div class="container">
@@ -352,6 +653,55 @@
     <div class="copyright">© 2026 Sustainable Electrochemical Engineering Lab (SEE Lab). All rights reserved.</div>
   </div>
 </footer>
+
+<div class="gallery-modal" id="galleryModal" aria-hidden="true">
+  <div class="gallery-modal-inner">
+    <button class="gallery-modal-close" type="button" aria-label="Close image viewer">×</button>
+    <img id="galleryModalImage" src="" alt="">
+    <div class="gallery-modal-caption" id="galleryModalCaption"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const modal = document.getElementById('galleryModal');
+  const modalImage = document.getElementById('galleryModalImage');
+  const modalCaption = document.getElementById('galleryModalCaption');
+  const closeBtn = modal.querySelector('.gallery-modal-close');
+
+  function openModal(button){
+    const img = button.querySelector('img');
+    modalImage.src = button.dataset.full || img.src;
+    modalImage.alt = img.alt || '';
+    modalCaption.textContent = button.dataset.caption || '';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    modalImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery-button').forEach(button => {
+    button.addEventListener('click', () => openModal(button));
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+})();
+</script>
+
 <script src="app.js"></script>
 </body>
 </html>
