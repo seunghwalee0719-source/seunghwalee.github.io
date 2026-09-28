@@ -445,6 +445,106 @@
       }
     }
 
+
+    /* Grouped-photo carousel controls inside the full-screen viewer */
+    .gallery-modal-stage{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:220px;
+    }
+
+    .gallery-modal-nav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      z-index:3;
+      width:48px;
+      height:48px;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,.30);
+      border-radius:50%;
+      background:rgba(8,31,50,.78);
+      color:#fff;
+      font-size:30px;
+      line-height:1;
+      cursor:pointer;
+      box-shadow:0 8px 24px rgba(0,0,0,.20);
+      transition:background .18s ease, transform .18s ease;
+    }
+
+    .gallery-modal-nav:hover{
+      background:rgba(13,74,116,.92);
+    }
+
+    .gallery-modal-nav.prev{
+      left:14px;
+    }
+
+    .gallery-modal-nav.next{
+      right:14px;
+    }
+
+    .gallery-modal-nav.visible{
+      display:flex;
+    }
+
+    .gallery-modal-meta{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:18px;
+      color:#d9ebf5;
+      font-size:12px;
+    }
+
+    .gallery-modal-count{
+      opacity:.82;
+    }
+
+    .gallery-stack-badge{
+      position:absolute;
+      right:12px;
+      bottom:12px;
+      z-index:2;
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(7,37,59,.82);
+      color:#fff;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.02em;
+      pointer-events:none;
+    }
+
+    .gallery-button{
+      position:relative;
+    }
+
+    @media(max-width:620px){
+      .gallery-modal-nav{
+        width:42px;
+        height:42px;
+        font-size:26px;
+      }
+
+      .gallery-modal-nav.prev{
+        left:6px;
+      }
+
+      .gallery-modal-nav.next{
+        right:6px;
+      }
+    }
+
   </style>
 
 </head>
@@ -550,29 +650,16 @@
         <div class="life-gallery">
           <figure class="gallery-item">
             <button class="gallery-button" type="button"
-                    data-full="assets/lablife-cwnu-01.jpg"
-                    data-caption="CWNU · Photo 01">
-              <img src="assets/lablife-cwnu-01.jpg" alt="CWNU · Photo 01" loading="lazy">
+                    data-gallery="assets/042022.jpg|assets/042022-1.jpg|assets/042022-2.jpg"
+                    data-caption="04/2022 · Cherry blossoms at Cheongunji Lake">
+              <img src="assets/042022.jpg"
+                   alt="04/2022 · Cherry blossoms at Cheongunji Lake"
+                   loading="lazy">
+              <span class="gallery-stack-badge" aria-hidden="true">3 photos</span>
             </button>
-            <figcaption>CWNU · Photo 01</figcaption>
+            <figcaption>2022, Cherry blossoms at Cheongunji Lake</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <button class="gallery-button" type="button"
-                    data-full="assets/lablife-cwnu-02.jpg"
-                    data-caption="CWNU · Photo 02">
-              <img src="assets/lablife-cwnu-02.jpg" alt="CWNU · Photo 02" loading="lazy">
-            </button>
-            <figcaption>CWNU · Photo 02</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <button class="gallery-button" type="button"
-                    data-full="assets/lablife-cwnu-03.jpg"
-                    data-caption="CWNU · Photo 03">
-              <img src="assets/lablife-cwnu-03.jpg" alt="CWNU · Photo 03" loading="lazy">
-            </button>
-            <figcaption>CWNU · Photo 03</figcaption>
-          </figure>
-        </div>
+</div>
       </section>
 
       <section class="life-era" id="earlier">
@@ -666,8 +753,17 @@
 <div class="gallery-modal" id="galleryModal" aria-hidden="true">
   <div class="gallery-modal-inner">
     <button class="gallery-modal-close" type="button" aria-label="Close image viewer">×</button>
-    <img id="galleryModalImage" src="" alt="">
+
+    <div class="gallery-modal-stage">
+      <button class="gallery-modal-nav prev" id="galleryPrev" type="button" aria-label="Previous photo">‹</button>
+      <img id="galleryModalImage" src="" alt="">
+      <button class="gallery-modal-nav next" id="galleryNext" type="button" aria-label="Next photo">›</button>
+    </div>
+
     <div class="gallery-modal-caption" id="galleryModalCaption"></div>
+    <div class="gallery-modal-meta">
+      <span class="gallery-modal-count" id="galleryModalCount"></span>
+    </div>
   </div>
 </div>
 
@@ -676,13 +772,40 @@
   const modal = document.getElementById('galleryModal');
   const modalImage = document.getElementById('galleryModalImage');
   const modalCaption = document.getElementById('galleryModalCaption');
+  const modalCount = document.getElementById('galleryModalCount');
   const closeBtn = modal.querySelector('.gallery-modal-close');
+  const prevBtn = document.getElementById('galleryPrev');
+  const nextBtn = document.getElementById('galleryNext');
+
+  let currentGallery = [];
+  let currentIndex = 0;
+  let currentCaption = '';
+
+  function renderCurrent(){
+    const src = currentGallery[currentIndex];
+    modalImage.src = src;
+    modalImage.alt = currentCaption || 'Lab Life photo';
+    modalCaption.textContent = currentCaption || '';
+
+    const isGrouped = currentGallery.length > 1;
+    prevBtn.classList.toggle('visible', isGrouped);
+    nextBtn.classList.toggle('visible', isGrouped);
+    modalCount.textContent = isGrouped
+      ? `${currentIndex + 1} / ${currentGallery.length}`
+      : '';
+  }
 
   function openModal(button){
     const img = button.querySelector('img');
-    modalImage.src = button.dataset.full || img.src;
-    modalImage.alt = img.alt || '';
-    modalCaption.textContent = button.dataset.caption || '';
+    const grouped = button.dataset.gallery
+      ? button.dataset.gallery.split('|').filter(Boolean)
+      : [button.dataset.full || img.src];
+
+    currentGallery = grouped;
+    currentIndex = 0;
+    currentCaption = button.dataset.caption || img.alt || '';
+
+    renderCurrent();
     modal.classList.add('open');
     modal.setAttribute('aria-hidden','false');
     document.body.style.overflow = 'hidden';
@@ -692,7 +815,23 @@
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
     modalImage.src = '';
+    modalCount.textContent = '';
+    currentGallery = [];
+    currentIndex = 0;
+    currentCaption = '';
     document.body.style.overflow = '';
+  }
+
+  function showPrevious(){
+    if(currentGallery.length < 2) return;
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    renderCurrent();
+  }
+
+  function showNext(){
+    if(currentGallery.length < 2) return;
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    renderCurrent();
   }
 
   document.querySelectorAll('.gallery-button').forEach(button => {
@@ -700,13 +839,19 @@
   });
 
   closeBtn.addEventListener('click', closeModal);
+  prevBtn.addEventListener('click', showPrevious);
+  nextBtn.addEventListener('click', showNext);
 
   modal.addEventListener('click', (e) => {
     if(e.target === modal) closeModal();
   });
 
   document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    if(!modal.classList.contains('open')) return;
+
+    if(e.key === 'Escape') closeModal();
+    if(e.key === 'ArrowLeft') showPrevious();
+    if(e.key === 'ArrowRight') showNext();
   });
 })();
 </script>
