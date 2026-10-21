@@ -9,6 +9,97 @@
   <link rel="stylesheet" href="styles.css">
 
 
+
+  <style>
+    /* Small recruitment notice on the home hero */
+    .hero{position:relative;}
+
+    .student-callout{
+      position:absolute;
+      z-index:8;
+      top:50%;
+      right:max(28px,4vw);
+      transform:translateY(-48%);
+      width:min(330px,28vw);
+      padding:20px 21px;
+      border:1px solid rgba(255,255,255,.58);
+      border-radius:18px;
+      background:rgba(255,255,255,.82);
+      color:#111;
+      box-shadow:0 18px 45px rgba(0,0,0,.18);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    .student-callout small{
+      display:block;
+      margin-bottom:7px;
+      color:#111;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.11em;
+    }
+
+    .student-callout h2{
+      margin:0 0 9px;
+      color:#111;
+      font-size:20px;
+      line-height:1.35;
+      letter-spacing:-.02em;
+    }
+
+    .student-callout p{
+      margin:0;
+      color:#222;
+      font-size:12.5px;
+      line-height:1.72;
+      word-break:keep-all;
+    }
+
+    .student-callout .coffee{
+      display:block;
+      margin-top:10px;
+      color:#111;
+      font-size:12.5px;
+      font-weight:900;
+    }
+
+    .student-callout a{
+      display:inline-flex;
+      margin-top:13px;
+      padding:8px 11px;
+      border-radius:999px;
+      background:rgba(15,15,15,.92);
+      color:#fff;
+      font-size:11px;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .student-callout a:hover{background:#000;}
+
+    @media(max-width:1180px){
+      .student-callout{right:24px;width:290px;}
+    }
+
+    @media(max-width:980px){
+      .student-callout{
+        position:relative;
+        top:auto;
+        right:auto;
+        transform:none;
+        width:auto;
+        margin:28px 24px 0;
+        background:rgba(255,255,255,.90);
+      }
+    }
+
+    @media(max-width:640px){
+      .student-callout{margin:22px 16px 0;padding:18px;}
+      .student-callout h2{font-size:18px;}
+    }
+  </style>
+
 </head>
 <body>
   <header class="site-header">
@@ -38,6 +129,18 @@
           </div>
         </div>
       </div>
+
+      <aside class="student-callout" aria-label="학생 모집 안내">
+        <small>JOIN SEE LAB</small>
+        <h2>학부연구생 · 대학원생 모집 중</h2>
+        <p>
+          전기화학·촉매·수전해 연구가 궁금하거나,
+          연구실 생활과 진로에 대해 이야기해보고 싶은 학생을 언제든 환영합니다.
+        </p>
+        <span class="coffee">Coffee is on me.</span>
+        <a href="contact.html">자세히 보기 →</a>
+      </aside>
+
       <div class="hero-metrics container">
         <div class="metric"><small>Green Energy Solutions</small><strong>H₂</strong><span>Electrochemical routes for sustainable hydrogen and clean energy systems.</span></div>
         <div class="metric"><small>Durable Catalysts</small><strong>Reconstruction</strong><span>Understanding stability, dissolution, and active-phase evolution in operation.</span></div>

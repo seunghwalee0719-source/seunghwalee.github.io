@@ -430,6 +430,63 @@
       }
     }
 
+  
+    /* Korean recruitment / open-door message */
+    .student-welcome{
+      margin-bottom:24px;
+      padding:30px 32px;
+      border-radius:24px;
+      border:1px solid #d7e6f0;
+      background:
+        radial-gradient(circle at 92% 18%,rgba(73,205,232,.13),transparent 24%),
+        linear-gradient(135deg,#f6fbfe,#ffffff);
+      box-shadow:0 14px 32px rgba(17,60,91,.05);
+    }
+
+    .student-welcome .ko-label{
+      display:inline-flex;
+      margin-bottom:10px;
+      color:#0d72cf;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.08em;
+    }
+
+    .student-welcome h2{
+      margin:0 0 12px;
+      color:#123a5b;
+      font-size:28px;
+      line-height:1.35;
+      letter-spacing:-.025em;
+      font-family:inherit;
+    }
+
+    .student-welcome p{
+      margin:0;
+      max-width:900px;
+      color:#526e83;
+      font-size:15px;
+      line-height:1.9;
+      word-break:keep-all;
+    }
+
+    .student-welcome .coffee-line{
+      margin-top:16px;
+      color:#142f46;
+      font-size:16px;
+      font-weight:800;
+    }
+
+    .student-welcome .coffee-line span{
+      color:#0d72cf;
+    }
+
+    @media(max-width:640px){
+      .student-welcome{padding:24px 21px;}
+      .student-welcome h2{font-size:23px;}
+      .student-welcome p{font-size:14px;}
+    }
+
   </style>
 
 </head>
@@ -480,6 +537,19 @@
 
 <main class="content">
   <div class="container content-wrap">
+
+
+    <section class="student-welcome" aria-label="학생 모집 안내">
+      <div class="ko-label">STUDENTS ARE ALWAYS WELCOME</div>
+      <h2>학부연구생 · 대학원생을 모집하고 있습니다.</h2>
+      <p>
+        전기화학, 수전해, 촉매, operando 분석에 관심이 있는 학생이라면 편하게 연락 주세요.
+        아직 구체적인 연구 주제가 정해지지 않았더라도 연구실 생활이나 대학원 진학이 궁금한 학생을 환영합니다.
+        연구 참여와 직접 관련이 없더라도, 이 분야의 연구나 진로 또는 여러 가지 이야기를 나누고 싶은 학생이라면
+        언제든 부담 없이 찾아와도 좋습니다.
+      </p>
+      <div class="coffee-line"><span>Coffee is on me.</span> 편하게 이야기하러 오세요.</div>
+    </section>
 
     <section class="section-card">
       <div class="eyebrow">Contact</div>

@@ -395,6 +395,50 @@
       }
     }
 
+  
+    /* Korean introduction for undergraduate visitors */
+    .research-korean-intro{
+      margin:10px 0 8px;
+      padding:26px 28px;
+      border:1px solid #d8e7f0;
+      border-radius:22px;
+      background:linear-gradient(135deg,#f3f9fd 0%,#ffffff 72%);
+      box-shadow:0 12px 30px rgba(17,60,91,.05);
+    }
+
+    .research-korean-intro .ko-label{
+      display:inline-flex;
+      align-items:center;
+      margin-bottom:10px;
+      color:#0d72cf;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.08em;
+    }
+
+    .research-korean-intro h2{
+      margin:0 0 10px;
+      color:#123a5b;
+      font-size:24px;
+      line-height:1.35;
+      letter-spacing:-.02em;
+    }
+
+    .research-korean-intro p{
+      margin:0;
+      max-width:920px;
+      color:#536f84;
+      font-size:15px;
+      line-height:1.85;
+      word-break:keep-all;
+    }
+
+    @media(max-width:640px){
+      .research-korean-intro{padding:22px 20px;}
+      .research-korean-intro h2{font-size:21px;}
+      .research-korean-intro p{font-size:14px;}
+    }
+
   </style>
 </head>
 
@@ -443,6 +487,18 @@
 
 <main class="content">
   <div class="container research-wrap">
+
+
+    <section class="research-korean-intro" aria-label="연구 소개">
+      <div class="ko-label">학부생을 위한 연구 소개</div>
+      <h2>SEE Lab에서는 어떤 연구를 하나요?</h2>
+      <p>
+        SEE Lab은 전기화학 반응이 실제로 일어나는 <strong>촉매–전해질 계면</strong>을 이해하고,
+        이를 바탕으로 더 오래 작동하는 촉매와 전기화학 시스템을 만드는 연구실입니다.
+        쉽게 말하면, <strong>전기로 물을 분해해 수소를 만들고</strong>, 반응 중 촉매가 어떻게 변하는지 직접 관찰하며,
+        좋은 촉매를 실제 전해조와 전기화학 장치로 연결하는 연구를 합니다.
+      </p>
+    </section>
 
     <section id="green-hydrogen" class="research-topic">
       <div class="topic-grid">
