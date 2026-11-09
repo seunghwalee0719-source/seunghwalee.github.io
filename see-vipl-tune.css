@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+:root{
+  --see-ink:#1d2a33;
+  --see-body:#58656f;
+  --see-muted:#78848d;
+  --see-blue:#2f718e;
+  --see-blue-dark:#245e76;
+  --see-blue-soft:#eef5f7;
+  --see-line:#dde5e9;
+  --see-paper:#ffffff;
+  --see-wash:#f7f9fa;
+  --see-shell:1120px;
+}
+
+/* ---------- GLOBAL SCALE / TYPOGRAPHY ---------- */
+html{
+  font-size:15px;
+}
+
+body{
+  font-family:Inter,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif !important;
+  color:var(--see-body);
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.container{
+  width:min(var(--see-shell),calc(100% - 52px)) !important;
+}
+
+h1,h2,h3,h4,
+.brand,
+.topic-copy h2,
+.section-card h2,
+.soft-panel h3,
+.info-card h3{
+  font-family:Inter,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif !important;
+  letter-spacing:-.025em;
+}
+
+p{
+  letter-spacing:-.005em;
+}
+
+a{
+  transition:color .18s ease,border-color .18s ease,background .18s ease,opacity .18s ease;
+}
+
+/* ---------- HEADER ---------- */
+.site-header{
+  background:rgba(255,255,255,.96) !important;
+  border-bottom:1px solid rgba(221,229,233,.9);
+  box-shadow:none !important;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+
+.nav{
+  min-height:68px !important;
+}
+
+.brand{
+  color:var(--see-ink) !important;
+  font-size:19px !important;
+  font-weight:700 !important;
+  letter-spacing:.02em !important;
+}
+
+.brand-sub{
+  color:#7a8790 !important;
+  font-size:9.5px !important;
+  line-height:1.25 !important;
+  letter-spacing:.01em !important;
+}
+
+.nav-links{
+  gap:22px !important;
+}
+
+.nav-links a{
+  color:#53616b !important;
+  font-size:12.5px !important;
+  font-weight:500 !important;
+  letter-spacing:0 !important;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+  color:var(--see-blue-dark) !important;
+}
+
+.search-circle{
+  opacity:.55;
+  transform:scale(.88);
+}
+
+/* ---------- COMMON LIGHT-PAGE LANGUAGE ---------- */
+.page-light{
+  background:#fff !important;
+}
+
+.eyebrow{
+  color:var(--see-blue) !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em !important;
+}
+
+.content{
+  background:#fff !important;
+}
+
+.lede{
+  color:var(--see-body) !important;
+  font-size:14.5px !important;
+  line-height:1.78 !important;
+}
+
+.card,
+.section-card,
+.info-card,
+.soft-panel,
+.figure-card,
+.alumni-card{
+  border-color:var(--see-line) !important;
+  box-shadow:0 7px 22px rgba(34,55,69,.045) !important;
+}
+
+.card,
+.section-card,
+.soft-panel,
+.figure-card,
+.alumni-card{
+  border-radius:15px !important;
+}
+
+/* ---------- HOME ---------- */
+.hero-content{
+  max-width:650px !important;
+}
+
+.hero-content h1{
+  font-size:clamp(44px,5.3vw,70px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.045em !important;
+  font-weight:600 !important;
+}
+
+.hero-lab{
+  font-size:14px !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+}
+
+.hero-uni{
+  font-size:12.5px !important;
+}
+
+.hero-summary{
+  max-width:570px !important;
+  font-size:14px !important;
+  line-height:1.72 !important;
+}
+
+.hero-divider{
+  opacity:.7;
+}
+
+.btn{
+  border-radius:8px !important;
+  padding:10px 15px !important;
+  font-size:11.5px !important;
+  font-weight:600 !important;
+  box-shadow:none !important;
+}
+
+.hero-metrics{
+  gap:0 !important;
+}
+
+.metric{
+  padding:21px 20px !important;
+}
+
+.metric small{
+  font-size:9px !important;
+  letter-spacing:.11em !important;
+}
+
+.metric strong{
+  font-size:18px !important;
+  font-weight:600 !important;
+}
+
+.metric span{
+  font-size:11px !important;
+  line-height:1.55 !important;
+}
+
+/* Recruitment notice: lighter and less visually dominant */
+.student-callout{
+  width:min(300px,26vw) !important;
+  padding:17px 18px !important;
+  border-radius:12px !important;
+  border:1px solid rgba(255,255,255,.72) !important;
+  background:rgba(255,255,255,.86) !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.12) !important;
+}
+
+.student-callout small{
+  font-size:9px !important;
+  font-weight:700 !important;
+}
+
+.student-callout h2{
+  font-size:17px !important;
+  font-weight:600 !important;
+}
+
+.student-callout p,
+.student-callout .coffee{
+  font-size:11.5px !important;
+}
+
+.student-callout a{
+  border-radius:7px !important;
+  padding:7px 10px !important;
+  font-weight:600 !important;
+}
+
+/* ---------- RESEARCH ---------- */
+.research-hero{
+  padding:58px 0 48px !important;
+  background:linear-gradient(180deg,#fafcfc 0%,#f4f7f8 100%) !important;
+  border-bottom:1px solid var(--see-line) !important;
+}
+
+.research-hero h1{
+  max-width:790px !important;
+  font-size:clamp(38px,4.6vw,56px) !important;
+  line-height:1.08 !important;
+  font-weight:600 !important;
+  color:var(--see-ink) !important;
+}
+
+.research-hero p{
+  max-width:760px !important;
+  color:var(--see-body) !important;
+  font-size:14.5px !important;
+  line-height:1.75 !important;
+}
+
+.research-nav{
+  margin-top:22px !important;
+  gap:8px !important;
+}
+
+.research-nav a{
+  padding:8px 11px !important;
+  border-radius:8px !important;
+  border-color:var(--see-line) !important;
+  color:#4e6876 !important;
+  font-size:10.5px !important;
+  font-weight:600 !important;
+  box-shadow:none !important;
+}
+
+.research-nav span{
+  width:20px !important;
+  height:20px !important;
+  border-radius:5px !important;
+  background:var(--see-blue-soft) !important;
+  color:var(--see-blue-dark) !important;
+  font-size:9px !important;
+}
+
+.research-wrap{
+  padding:12px 0 62px !important;
+}
+
+.research-korean-intro{
+  margin:22px 0 6px !important;
+  padding:24px 26px !important;
+  border-radius:14px !important;
+  border-color:var(--see-line) !important;
+  background:#fbfcfc !important;
+  box-shadow:none !important;
+}
+
+.research-korean-intro .ko-label{
+  color:var(--see-blue) !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+}
+
+.research-korean-intro h2{
+  color:var(--see-ink) !important;
+  font-size:22px !important;
+  font-weight:600 !important;
+}
+
+.research-korean-intro p{
+  max-width:950px !important;
+  color:#4d5d67 !important;
+  font-size:14px !important;
+  line-height:1.86 !important;
+}
+
+.research-korean-keywords{
+  gap:7px !important;
+  margin-top:15px !important;
+}
+
+.research-korean-keywords span{
+  padding:6px 9px !important;
+  border-radius:6px !important;
+  background:#fff !important;
+  border-color:var(--see-line) !important;
+  color:#486878 !important;
+  font-size:10.5px !important;
+  font-weight:600 !important;
+}
+
+.research-topic{
+  padding:48px 0 52px !important;
+  border-color:#e5eaed !important;
+}
+
+.topic-grid{
+  gap:34px !important;
+}
+
+.topic-index{
+  width:44px !important;
+  height:44px !important;
+  margin-bottom:13px !important;
+  border-radius:10px !important;
+  background:var(--see-blue-dark) !important;
+  box-shadow:none !important;
+  font-family:Inter,sans-serif !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+}
+
+.topic-copy h2{
+  margin-bottom:12px !important;
+  color:var(--see-ink) !important;
+  font-size:clamp(30px,3.5vw,41px) !important;
+  line-height:1.12 !important;
+  font-weight:600 !important;
+}
+
+.topic-copy .topic-intro{
+  color:var(--see-body) !important;
+  font-size:14px !important;
+  line-height:1.75 !important;
+}
+
+.topic-list{
+  gap:8px !important;
+}
+
+.topic-item{
+  padding:11px 13px !important;
+  border-radius:9px !important;
+  border-color:var(--see-line) !important;
+  background:#fbfcfc !important;
+}
+
+.topic-item strong{
+  color:#334b59 !important;
+  font-size:13px !important;
+  font-weight:600 !important;
+}
+
+.topic-item p{
+  color:#69767f !important;
+  font-size:11.8px !important;
+}
+
+.topic-tag{
+  padding:6px 8px !important;
+  border-radius:6px !important;
+  border-color:var(--see-line) !important;
+  color:#60737e !important;
+  font-size:9.5px !important;
+  font-weight:600 !important;
+}
+
+.figure-card{
+  border-radius:14px !important;
+}
+
+.figure-head{
+  padding:11px 14px !important;
+  background:#274f63 !important;
+  font-size:9.5px !important;
+  font-weight:600 !important;
+  letter-spacing:.08em !important;
+}
+
+.figure-head::before{
+  width:6px !important;
+  height:6px !important;
+  background:#93c6d7 !important;
+}
+
+.figure-image{
+  padding:14px !important;
+}
+
+.figure-note{
+  padding:0 15px 14px !important;
+  color:#77838b !important;
+  font-size:10.5px !important;
+}
+
+.research-logic{
+  margin-top:15px !important;
+  padding:22px !important;
+  border-radius:14px !important;
+  border-color:var(--see-line) !important;
+  background:#f8fafb !important;
+}
+
+.research-logic h3{
+  color:var(--see-ink) !important;
+  font-family:Inter,sans-serif !important;
+  font-size:19px !important;
+  font-weight:600 !important;
+}
+
+.logic-step{
+  padding:13px 10px !important;
+  border-radius:9px !important;
+  border-color:var(--see-line) !important;
+}
+
+.logic-step small{
+  color:var(--see-blue) !important;
+  font-size:8.5px !important;
+}
+
+.logic-step strong{
+  color:#314a58 !important;
+  font-size:13px !important;
+  font-weight:600 !important;
+}
+
+.logic-step p{
+  color:#78848c !important;
+  font-size:10.5px !important;
+}
+
+/* ---------- CONTACT ---------- */
+.sub-hero{
+  padding:58px 0 60px !important;
+  background:#f7f9fa !important;
+  border-bottom:1px solid var(--see-line) !important;
+}
+
+.sub-hero::after{
+  opacity:.25 !important;
+}
+
+.sub-hero-grid{
+  gap:34px !important;
+}
+
+.sub-hero-copy h1{
+  color:var(--see-ink) !important;
+  font-size:clamp(36px,4.5vw,52px) !important;
+  line-height:1.08 !important;
+  font-weight:600 !important;
+}
+
+.sub-hero-copy p{
+  color:var(--see-body) !important;
+  font-size:14px !important;
+  line-height:1.72 !important;
+}
+
+.sub-hero-badges span{
+  padding:7px 10px !important;
+  border-radius:7px !important;
+  border-color:var(--see-line) !important;
+  color:#5b6f7a !important;
+  font-size:9.5px !important;
+  font-weight:600 !important;
+  box-shadow:none !important;
+}
+
+.contact-visual-stack .sub-hero-visual,
+.sub-hero-visual{
+  border-radius:14px !important;
+  border-color:var(--see-line) !important;
+  box-shadow:0 7px 22px rgba(34,55,69,.05) !important;
+}
+
+.content-wrap{
+  padding:26px 0 66px !important;
+}
+
+.student-welcome{
+  margin-bottom:20px !important;
+  padding:25px 27px !important;
+  border-radius:14px !important;
+  border-color:var(--see-line) !important;
+  background:#fbfcfc !important;
+  box-shadow:none !important;
+}
+
+.student-welcome .ko-label{
+  color:var(--see-blue) !important;
+  font-size:10px !important;
+  font-weight:700 !important;
+}
+
+.student-welcome h2{
+  color:var(--see-ink) !important;
+  font-size:23px !important;
+  font-weight:600 !important;
+}
+
+.student-welcome p{
+  color:#4f606a !important;
+  font-size:14px !important;
+  line-height:1.82 !important;
+}
+
+.student-welcome .coffee-line{
+  color:#33454f !important;
+  font-size:14px !important;
+  font-weight:600 !important;
+}
+
+.student-welcome .coffee-line span{
+  color:var(--see-blue-dark) !important;
+}
+
+.section-card{
+  padding:24px !important;
+  border-radius:14px !important;
+}
+
+.section-card h2{
+  color:var(--see-ink) !important;
+  font-size:25px !important;
+  font-weight:600 !important;
+}
+
+.contact-info-logo-row{
+  gap:28px !important;
+}
+
+.contact-item{
+  padding:14px 16px !important;
+  border-radius:10px !important;
+  border-color:var(--see-line) !important;
+}
+
+.contact-item strong{
+  color:#344d5b !important;
+  font-size:13.5px !important;
+  font-weight:600 !important;
+}
+
+.contact-item p{
+  color:#66747d !important;
+  font-size:12.5px !important;
+}
+
+/* ---------- FOOTER ---------- */
+.footer{
+  border-top:1px solid rgba(221,229,233,.35);
+}
+
+.footer h4{
+  font-size:12px !important;
+  font-weight:600 !important;
+  letter-spacing:.01em !important;
+}
+
+.footer p,
+.footer a,
+.copyright{
+  font-size:10.5px !important;
+  line-height:1.7 !important;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:980px){
+  .container{
+    width:min(100% - 36px,var(--see-shell)) !important;
+  }
+
+  .nav{
+    min-height:64px !important;
+  }
+
+  .student-callout{
+    width:auto !important;
+  }
+}
+
+@media(max-width:640px){
+  html{
+    font-size:14px;
+  }
+
+  .container{
+    width:calc(100% - 28px) !important;
+  }
+
+  .hero-content h1{
+    font-size:clamp(38px,12vw,52px) !important;
+  }
+
+  .research-hero{
+    padding:48px 0 40px !important;
+  }
+
+  .research-hero h1{
+    font-size:38px !important;
+  }
+
+  .research-korean-intro,
+  .student-welcome,
+  .section-card{
+    padding:20px !important;
+  }
+
+  .research-topic{
+    padding:38px 0 42px !important;
+  }
+
+  .sub-hero{
+    padding:46px 0 48px !important;
+  }
+
+  .sub-hero-copy h1{
+    font-size:36px !important;
+  }
+}
