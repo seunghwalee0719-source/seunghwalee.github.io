@@ -1676,3 +1676,60 @@ body.page-light .content > .container > h2{
   outline:2px solid #6f9fb3 !important;
   outline-offset:2px !important;
 }
+
+/* =========================================================
+   PUBLICATIONS v2 — more breathing room around each paper
+   ========================================================= */
+.publications-page .pub{
+  position:relative !important;
+  padding:21px 18px 23px 22px !important;
+  border-left:3px solid #4a95cf !important;
+  border-bottom:1px solid #e8ecee !important;
+}
+
+/* More space between the blue line and all text */
+.publications-page .pub .journal{
+  margin:0 0 7px !important;
+}
+
+/* Title gets a little more room before the author line */
+.publications-page .pub h3{
+  margin:0 !important;
+  padding:0 !important;
+  line-height:1.52 !important;
+}
+
+/* Clear visual separation: title -> authors -> citation */
+.publications-page .pub .authors{
+  margin:11px 0 0 !important;
+  line-height:1.6 !important;
+}
+
+.publications-page .pub .citation{
+  margin:5px 0 0 !important;
+  line-height:1.55 !important;
+}
+
+/* Keep adjacent entries from visually merging */
+.publications-page .pub + .pub{
+  margin-top:15px !important;
+}
+
+/* Slightly softer line than the old bright accent */
+.publications-page .pub:hover{
+  border-left-color:#2f718e !important;
+}
+
+@media(max-width:640px){
+  .publications-page .pub{
+    padding:18px 12px 20px 17px !important;
+  }
+
+  .publications-page .pub + .pub{
+    margin-top:11px !important;
+  }
+
+  .publications-page .pub .authors{
+    margin-top:9px !important;
+  }
+}
