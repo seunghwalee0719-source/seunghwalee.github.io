@@ -1733,3 +1733,72 @@ body.page-light .content > .container > h2{
     margin-top:9px !important;
   }
 }
+
+/* =========================================================
+   MOBILE MENU BUTTON — visible hamburger control
+   ========================================================= */
+.menu-toggle{
+  color:#1d2a33 !important;
+  background:#ffffff !important;
+  border:1px solid #cfdadd !important;
+  border-radius:8px !important;
+  width:38px !important;
+  height:38px !important;
+  padding:0 !important;
+  align-items:center !important;
+  justify-content:center !important;
+  font-family:Arial,sans-serif !important;
+  font-size:21px !important;
+  font-weight:400 !important;
+  line-height:1 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  box-shadow:none !important;
+  cursor:pointer !important;
+  -webkit-appearance:none !important;
+  appearance:none !important;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus{
+  color:#173a4b !important;
+  background:#f4f7f8 !important;
+  border-color:#aebfc7 !important;
+}
+
+.menu-toggle:focus-visible{
+  outline:2px solid #6f9fb3 !important;
+  outline-offset:2px !important;
+}
+
+@media(min-width:981px){
+  .menu-toggle{
+    display:none !important;
+  }
+}
+
+@media(max-width:980px){
+  .menu-toggle{
+    display:inline-flex !important;
+    flex:0 0 38px !important;
+    position:relative !important;
+    z-index:1200 !important;
+  }
+
+  .search-circle{
+    display:none !important;
+  }
+
+  .nav-links{
+    color:#1d2a33 !important;
+  }
+
+  .nav-links a{
+    color:#405762 !important;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active{
+    color:#245e76 !important;
+  }
+}
