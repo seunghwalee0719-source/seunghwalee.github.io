@@ -548,6 +548,35 @@
   </style>
 
   <link rel="stylesheet" href="see-vipl-tune.css">
+
+  <style>
+    /* Dream Big hero image: show the full message without cropping */
+    .lab-life-page .sub-hero-visual{
+      background:#fff !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      overflow:hidden !important;
+    }
+
+    .lab-life-page .sub-hero-visual img{
+      width:100% !important;
+      height:215px !important;
+      max-height:215px !important;
+      object-fit:contain !important;
+      object-position:center top !important;
+      background:#fff !important;
+    }
+
+    @media(max-width:820px){
+      .lab-life-page .sub-hero-visual img{
+        height:230px !important;
+        max-height:230px !important;
+        object-position:center top !important;
+      }
+    }
+  </style>
+
 </head>
 <body class="page-light lab-life-page">
 
